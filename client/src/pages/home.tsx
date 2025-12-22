@@ -4,6 +4,7 @@ import { Zap, Users, Briefcase, Phone, Mail, MapPin, ArrowRight, Star } from "lu
 import trainingImage from "@assets/stock_images/group_of_people_in_a_793b95a1.jpg";
 import freelanceImage from "@assets/stock_images/business_meeting_con_e4b19421.jpg";
 import consultingImage from "@assets/stock_images/professional_woman_w_62468fac.jpg";
+import ContactForm from "@/components/contact-form";
 
 export default function Home() {
   const [hoveredService, setHoveredService] = useState<string | null>(null);
@@ -244,10 +245,10 @@ export default function Home() {
             <motion.div {...fadeInUp}>
               <h2 className="font-serif text-4xl font-bold mb-6">About Zainabbi Trading</h2>
               <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
-                We're a dedicated team of professionals specializing in pattern making, fashion design education, and freelance services. With years of industry experience, we've helped hundreds of students and businesses master the art of pattern creation.
+                I am a professional pattern maker with 22 years of industry experience, working with designers, brands, factories, startups, and individual clients worldwide. I create manual and CAD patterns for menswear, womenswear, and kidswear, including western, formal, and casual garments, along with grading, scaling, and marking.
               </p>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                Our mission is to make professional pattern making education accessible and practical. Whether you're starting your journey or refining your expertise, we're here to guide you every step of the way.
+                I also offer in-person, one-on-one training in pattern making for beginners and advanced learners, using manual methods and Richpeace CAD software. If you are looking for professional pattern making support or want to learn pattern making with clear, practical guidance, feel free to reach out to discuss your requirements.
               </p>
               <div className="flex flex-col gap-4">
                 <div className="flex items-start gap-4">
@@ -255,8 +256,8 @@ export default function Home() {
                     <Star className="w-4 h-4 text-accent" />
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Expert Trainers</h4>
-                    <p className="text-muted-foreground">Years of industry experience</p>
+                    <h4 className="font-semibold mb-1">22+ Years Experience</h4>
+                    <p className="text-muted-foreground">Working with global designers and brands</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -264,8 +265,8 @@ export default function Home() {
                     <Star className="w-4 h-4 text-accent" />
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Practical Learning</h4>
-                    <p className="text-muted-foreground">Hands-on training with real projects</p>
+                    <h4 className="font-semibold mb-1">Richpeace CAD Expertise</h4>
+                    <p className="text-muted-foreground">Professional CAD pattern creation</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -273,8 +274,8 @@ export default function Home() {
                     <Star className="w-4 h-4 text-accent" />
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Flexible Solutions</h4>
-                    <p className="text-muted-foreground">Training and freelance services tailored to you</p>
+                    <h4 className="font-semibold mb-1">One-on-One Training</h4>
+                    <p className="text-muted-foreground">Personalized learning for all levels</p>
                   </div>
                 </div>
               </div>
@@ -298,6 +299,13 @@ export default function Home() {
         </div>
       </motion.section>
 
+      {/* Contact Form Section */}
+      <motion.section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50" {...staggerContainer}>
+        <div className="max-w-7xl mx-auto">
+          <ContactForm />
+        </div>
+      </motion.section>
+
       {/* Contact Section */}
       <motion.section id="contact" className="py-20 px-4 sm:px-6 lg:px-8" {...staggerContainer}>
         <div className="max-w-7xl mx-auto">
@@ -317,7 +325,7 @@ export default function Home() {
                 <MapPin className="w-6 h-6 text-primary" />
               </div>
               <h3 className="font-bold mb-2">Location</h3>
-              <p className="text-muted-foreground text-sm">Mira Road, Mumbai<br />Maharashtra, India</p>
+              <p className="text-muted-foreground text-sm">Shop No. 06, Kanakia Rd, opp. Fitness pro, Unique Gardens, Beverly Park, Mira Road East, Mumbai, Mira Bhayandar, Maharashtra 401107, India</p>
             </motion.div>
 
             <motion.div
@@ -330,7 +338,7 @@ export default function Home() {
                 <Phone className="w-6 h-6 text-accent" />
               </div>
               <h3 className="font-bold mb-2">Phone</h3>
-              <p className="text-muted-foreground text-sm">+91 XXXXX XXXXX<br />Available on WhatsApp</p>
+              <p className="text-muted-foreground text-sm">+91 90295 98867<br />Available on WhatsApp</p>
             </motion.div>
 
             <motion.div
@@ -343,7 +351,7 @@ export default function Home() {
                 <Mail className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="font-bold mb-2">Email</h3>
-              <p className="text-muted-foreground text-sm">contact@zainabbi.com<br />inquiry@zainabbi.com</p>
+              <p className="text-muted-foreground text-sm">zainabbitrading@gmail.com</p>
             </motion.div>
           </div>
         </div>
