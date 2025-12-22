@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Zap, Users, Briefcase, Phone, Mail, MapPin, ArrowRight, Star } from "lucide-react";
+import { Link } from "wouter";
 import trainingImage from "@assets/stock_images/group_of_people_in_a_793b95a1.jpg";
 import freelanceImage from "@assets/stock_images/business_meeting_con_e4b19421.jpg";
 import consultingImage from "@assets/stock_images/professional_woman_w_62468fac.jpg";
@@ -106,14 +107,15 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* Training Service */}
-            <motion.div
-              className="bg-white rounded-xl border border-border p-8 hover:border-primary/50 hover:shadow-xl transition-all duration-300 cursor-pointer"
-              onHoverStart={() => setHoveredService("training")}
-              onHoverEnd={() => setHoveredService(null)}
-              whileHover={{ y: -4 }}
-              {...fadeInUp}
-              data-testid="card-service-training"
-            >
+            <Link href="/training">
+              <motion.div
+                className="bg-white rounded-xl border border-border p-8 hover:border-primary/50 hover:shadow-xl transition-all duration-300 cursor-pointer"
+                onHoverStart={() => setHoveredService("training")}
+                onHoverEnd={() => setHoveredService(null)}
+                whileHover={{ y: -4 }}
+                {...fadeInUp}
+                data-testid="card-service-training"
+              >
               <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
                 <Users className="w-7 h-7 text-primary" />
               </div>
@@ -135,17 +137,19 @@ export default function Home() {
                   <span>One-on-one sessions</span>
                 </li>
               </ul>
-            </motion.div>
+              </motion.div>
+            </Link>
 
             {/* Grading & Marking Service */}
-            <motion.div
-              className="bg-white rounded-xl border border-border p-8 hover:border-accent/50 hover:shadow-xl transition-all duration-300 cursor-pointer"
-              onHoverStart={() => setHoveredService("grading")}
-              onHoverEnd={() => setHoveredService(null)}
-              whileHover={{ y: -4 }}
-              {...fadeInUp}
-              data-testid="card-service-grading"
-            >
+            <Link href="/grading">
+              <motion.div
+                className="bg-white rounded-xl border border-border p-8 hover:border-accent/50 hover:shadow-xl transition-all duration-300 cursor-pointer"
+                onHoverStart={() => setHoveredService("grading")}
+                onHoverEnd={() => setHoveredService(null)}
+                whileHover={{ y: -4 }}
+                {...fadeInUp}
+                data-testid="card-service-grading"
+              >
               <div className="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center mb-6">
                 <Zap className="w-7 h-7 text-accent" />
               </div>
@@ -167,17 +171,19 @@ export default function Home() {
                   <span>Quick turnaround</span>
                 </li>
               </ul>
-            </motion.div>
+              </motion.div>
+            </Link>
 
             {/* Freelancing Service */}
-            <motion.div
-              className="bg-white rounded-xl border border-border p-8 hover:border-secondary/50 hover:shadow-xl transition-all duration-300 cursor-pointer"
-              onHoverStart={() => setHoveredService("freelance")}
-              onHoverEnd={() => setHoveredService(null)}
-              whileHover={{ y: -4 }}
-              {...fadeInUp}
-              data-testid="card-service-freelance"
-            >
+            <Link href="/freelancing">
+              <motion.div
+                className="bg-white rounded-xl border border-border p-8 hover:border-secondary/50 hover:shadow-xl transition-all duration-300 cursor-pointer"
+                onHoverStart={() => setHoveredService("freelance")}
+                onHoverEnd={() => setHoveredService(null)}
+                whileHover={{ y: -4 }}
+                {...fadeInUp}
+                data-testid="card-service-freelance"
+              >
               <div className="w-14 h-14 bg-secondary/10 rounded-lg flex items-center justify-center mb-6">
                 <Briefcase className="w-7 h-7 text-secondary" />
               </div>
@@ -199,7 +205,8 @@ export default function Home() {
                   <span>Flexible engagement</span>
                 </li>
               </ul>
-            </motion.div>
+              </motion.div>
+            </Link>
           </div>
         </div>
       </motion.section>
@@ -314,45 +321,59 @@ export default function Home() {
             <p className="text-lg text-muted-foreground">We'd love to hear from you</p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-            <motion.div
-              className="bg-white rounded-xl border border-border p-8 text-center hover:border-primary/50 hover:shadow-lg transition-all"
-              whileHover={{ y: -4 }}
-              {...fadeInUp}
-              data-testid="card-contact-address"
+          <div className="grid md:grid-cols-3 gap-8">
+            <a
+              href="https://maps.google.com/?q=Shop+No.+06,+Kanakia+Rd,+Unique+Gardens,+Beverly+Park,+Mira+Road+East,+Mumbai,+Mira+Bhayandar,+Maharashtra+401107,+India"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <MapPin className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="font-bold mb-2">Location</h3>
-              <p className="text-muted-foreground text-sm">Shop No. 06, Kanakia Rd, opp. Fitness pro, Unique Gardens, Beverly Park, Mira Road East, Mumbai, Mira Bhayandar, Maharashtra 401107, India</p>
-            </motion.div>
+              <motion.div
+                className="bg-white rounded-xl border border-border p-8 text-center hover:border-primary/50 hover:shadow-lg transition-all cursor-pointer"
+                whileHover={{ y: -4 }}
+                {...fadeInUp}
+                data-testid="card-contact-address"
+              >
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="font-bold mb-2">Location</h3>
+                <p className="text-muted-foreground text-sm">Shop No. 06, Kanakia Rd, opp. Fitness pro, Unique Gardens, Beverly Park, Mira Road East, Mumbai, Mira Bhayandar, Maharashtra 401107, India</p>
+              </motion.div>
+            </a>
 
-            <motion.div
-              className="bg-white rounded-xl border border-border p-8 text-center hover:border-accent/50 hover:shadow-lg transition-all"
-              whileHover={{ y: -4 }}
-              {...fadeInUp}
-              data-testid="card-contact-phone"
+            <a
+              href="https://wa.me/919029598867?text=Hello%2C%20I%27m%20interested%20in%20your%20pattern%20making%20services"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Phone className="w-6 h-6 text-accent" />
-              </div>
-              <h3 className="font-bold mb-2">Phone</h3>
-              <p className="text-muted-foreground text-sm">+91 90295 98867<br />Available on WhatsApp</p>
-            </motion.div>
+              <motion.div
+                className="bg-white rounded-xl border border-border p-8 text-center hover:border-accent/50 hover:shadow-lg transition-all cursor-pointer"
+                whileHover={{ y: -4 }}
+                {...fadeInUp}
+                data-testid="card-contact-phone"
+              >
+                <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Phone className="w-6 h-6 text-accent" />
+                </div>
+                <h3 className="font-bold mb-2">Phone</h3>
+                <p className="text-muted-foreground text-sm">+91 90295 98867<br />Available on WhatsApp</p>
+              </motion.div>
+            </a>
 
-            <motion.div
-              className="bg-white rounded-xl border border-border p-8 text-center hover:border-secondary/50 hover:shadow-lg transition-all"
-              whileHover={{ y: -4 }}
-              {...fadeInUp}
-              data-testid="card-contact-email"
-            >
-              <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Mail className="w-6 h-6 text-secondary" />
-              </div>
-              <h3 className="font-bold mb-2">Email</h3>
-              <p className="text-muted-foreground text-sm">zainabbitrading@gmail.com</p>
-            </motion.div>
+            <a href="mailto:zainabbitrading@gmail.com">
+              <motion.div
+                className="bg-white rounded-xl border border-border p-8 text-center hover:border-secondary/50 hover:shadow-lg transition-all cursor-pointer"
+                whileHover={{ y: -4 }}
+                {...fadeInUp}
+                data-testid="card-contact-email"
+              >
+                <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Mail className="w-6 h-6 text-secondary" />
+                </div>
+                <h3 className="font-bold mb-2">Email</h3>
+                <p className="text-muted-foreground text-sm">zainabbitrading@gmail.com</p>
+              </motion.div>
+            </a>
           </div>
         </div>
       </motion.section>
