@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, Star, Briefcase, Zap, Users } from "lucide-react";
 import { Link } from "wouter";
 import freelanceImage from "@assets/stock_images/business_meeting_con_e4b19421.jpg";
+import logo from "@assets/generated_images/zbt_logo_design_orange_pink_fashion.png";
 
 export default function Freelancing() {
   const fadeInUp = {
@@ -15,13 +16,13 @@ export default function Freelancing() {
     <div className="min-h-screen bg-background text-foreground">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition">
-            <ArrowLeft className="w-5 h-5" />
-            <span className="font-bold text-lg text-secondary">Back</span>
+            <img src={logo} alt="Zainabbi Trading" className="w-10 h-10 object-contain" />
+            <span className="font-bold text-sm text-secondary">Back to Home</span>
           </Link>
           <span className="font-bold text-lg text-secondary">Freelance Services</span>
-          <div className="w-5 h-5"></div>
+          <div className="w-10 h-10"></div>
         </div>
       </nav>
 

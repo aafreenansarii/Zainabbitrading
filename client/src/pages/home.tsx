@@ -6,6 +6,7 @@ import trainingImage from "@assets/stock_images/group_of_people_in_a_793b95a1.jp
 import freelanceImage from "@assets/stock_images/business_meeting_con_e4b19421.jpg";
 import consultingImage from "@assets/stock_images/professional_woman_w_62468fac.jpg";
 import ContactForm from "@/components/contact-form";
+import logo from "@assets/generated_images/zbt_logo_design_orange_pink_fashion.png";
 
 export default function Home() {
   const [hoveredService, setHoveredService] = useState<string | null>(null);
@@ -28,12 +29,13 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center text-white font-bold">
-              Z
+            <img src={logo} alt="Zainabbi Trading" className="w-12 h-12 object-contain" />
+            <div className="flex flex-col">
+              <span className="font-bold text-lg text-secondary">Zainabbi Trading</span>
+              <span className="text-xs text-muted-foreground">Manual & CAD Pattern Maker | Trainer | Freelancer | Richpeace & Tuka</span>
             </div>
-            <span className="font-bold text-lg text-secondary">Zainabbi Trading</span>
           </div>
           <div className="hidden md:flex gap-8 text-sm font-medium">
             <a href="#services" className="text-muted-foreground hover:text-primary transition">Services</a>
@@ -323,12 +325,12 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <a
-              href="https://maps.google.com/?q=Shop+No.+06,+Kanakia+Rd,+Unique+Gardens,+Beverly+Park,+Mira+Road+East,+Mumbai,+Mira+Bhayandar,+Maharashtra+401107,+India"
+              href="https://maps.google.com/?q=Shop+No.+01,+Solan+Garden+Opp.+Fitness+Pro+Kanakia+Road,+Beverly+Park,+Mira+Road+East,+Mumbai,+Mira+Bhayandar,+401107"
               target="_blank"
               rel="noopener noreferrer"
             >
               <motion.div
-                className="bg-white rounded-xl border border-border p-8 text-center hover:border-primary/50 hover:shadow-lg transition-all cursor-pointer"
+                className="bg-white rounded-xl border border-border p-8 text-center hover:border-primary/50 hover:shadow-lg transition-all cursor-pointer min-h-80"
                 whileHover={{ y: -4 }}
                 {...fadeInUp}
                 data-testid="card-contact-address"
@@ -337,7 +339,7 @@ export default function Home() {
                   <MapPin className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="font-bold mb-2">Location</h3>
-                <p className="text-muted-foreground text-sm">Shop No. 06, Kanakia Rd, opp. Fitness pro, Unique Gardens, Beverly Park, Mira Road East, Mumbai, Mira Bhayandar, Maharashtra 401107, India</p>
+                <p className="text-muted-foreground text-sm">Shop No. 01, Solan Garden Opp. Fitness Pro Kanakia Road, Beverly Park, Mira Road East, Mumbai, Mira Bhayandar - 401107</p>
               </motion.div>
             </a>
 
@@ -347,7 +349,7 @@ export default function Home() {
               rel="noopener noreferrer"
             >
               <motion.div
-                className="bg-white rounded-xl border border-border p-8 text-center hover:border-accent/50 hover:shadow-lg transition-all cursor-pointer"
+                className="bg-white rounded-xl border border-border p-8 text-center hover:border-accent/50 hover:shadow-lg transition-all cursor-pointer min-h-80"
                 whileHover={{ y: -4 }}
                 {...fadeInUp}
                 data-testid="card-contact-phone"
@@ -362,7 +364,7 @@ export default function Home() {
 
             <a href="mailto:zainabbitrading@gmail.com">
               <motion.div
-                className="bg-white rounded-xl border border-border p-8 text-center hover:border-secondary/50 hover:shadow-lg transition-all cursor-pointer"
+                className="bg-white rounded-xl border border-border p-8 text-center hover:border-secondary/50 hover:shadow-lg transition-all cursor-pointer min-h-80"
                 whileHover={{ y: -4 }}
                 {...fadeInUp}
                 data-testid="card-contact-email"
@@ -383,12 +385,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center mb-8">
             <div className="flex items-center gap-2 mb-4 md:mb-0">
-              <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center font-bold">
-                Z
-              </div>
+              <img src={logo} alt="Zainabbi Trading" className="w-10 h-10 object-contain" />
               <span className="font-bold">Zainabbi Trading</span>
             </div>
-            <p className="text-white/70 text-sm">Mira Road, Mumbai | Professional Pattern Making Training & Services</p>
+            <p className="text-white/70 text-sm">Mira Road, Mumbai | Manual & CAD Pattern Making | Richpeace & Tuka Software</p>
           </div>
           <div className="border-t border-white/20 pt-8">
             <p className="text-center text-white/60 text-sm">
