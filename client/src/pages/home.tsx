@@ -31,9 +31,9 @@ export default function Home() {
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <img src={logo} alt="Zainabbi Trading" className="w-12 h-12 object-contain" />
+            <img src={logo} alt="Zainab Bi Trading" className="w-12 h-12 object-contain" />
             <div className="flex flex-col">
-              <span className="font-bold text-lg text-secondary">Zainabbi Trading</span>
+              <span className="font-bold text-lg text-secondary">Zainab Bi Trading</span>
               <span className="text-xs text-muted-foreground">Manual & CAD Pattern Maker | Trainer | Freelancer | Richpeace & Tuka</span>
             </div>
           </div>
@@ -252,7 +252,7 @@ export default function Home() {
               />
             </motion.div>
             <motion.div {...fadeInUp}>
-              <h2 className="font-serif text-4xl font-bold mb-6">About Zainabbi Trading</h2>
+              <h2 className="font-serif text-4xl font-bold mb-6">About Zainab Bi Trading</h2>
               <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
                 I am a professional pattern maker with 22 years of industry experience, working with designers, brands, factories, startups, and individual clients worldwide. I create manual and CAD patterns for menswear, womenswear, and kidswear, including western, formal, and casual garments, along with grading, scaling, and marking.
               </p>
@@ -385,14 +385,14 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center mb-8">
             <div className="flex items-center gap-2 mb-4 md:mb-0">
-              <img src={logo} alt="Zainabbi Trading" className="w-10 h-10 object-contain" />
-              <span className="font-bold">Zainabbi Trading</span>
+              <img src={logo} alt="Zainab Bi Trading" className="w-10 h-10 object-contain" />
+              <span className="font-bold">Zainab Bi Trading</span>
             </div>
             <p className="text-white/70 text-sm">Mira Road, Mumbai | Manual & CAD Pattern Making | Richpeace & Tuka Software</p>
           </div>
           <div className="border-t border-white/20 pt-8">
             <p className="text-center text-white/60 text-sm">
-              © 2024 Zainabbi Trading. All rights reserved.
+              © 2024 Zainab Bi Trading. All rights reserved.
             </p>
           </div>
         </div>

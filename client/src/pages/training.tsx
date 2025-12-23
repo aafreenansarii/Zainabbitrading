@@ -18,7 +18,7 @@ export default function Training() {
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition">
-            <img src={logo} alt="Zainabbi Trading" className="w-10 h-10 object-contain" />
+            <img src={logo} alt="Zainab Bi Trading" className="w-10 h-10 object-contain" />
             <span className="font-bold text-sm text-secondary">Back to Home</span>
           </Link>
           <span className="font-bold text-lg text-secondary">Professional Training</span>
@@ -157,7 +157,7 @@ export default function Training() {
       {/* Footer */}
       <footer className="bg-secondary text-white py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <p className="text-white/70">© 2024 Zainabbi Trading. All rights reserved.</p>
+          <p className="text-white/70">© 2024 Zainab Bi Trading. All rights reserved.</p>
         </div>
       </footer>
     </div>
