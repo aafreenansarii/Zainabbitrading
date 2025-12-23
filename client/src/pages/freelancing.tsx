@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, Star, Briefcase, Zap, Users } from "lucide-react";
 import { Link } from "wouter";
 import freelanceImage from "@assets/stock_images/business_meeting_con_e4b19421.jpg";
-import logo from "@assets/generated_images/zbt_logo_design_orange_pink_fashion.png";
+import logo from "@assets/only_ZBT_1766448125486.jpeg";
 
 export default function Freelancing() {
   const fadeInUp = {

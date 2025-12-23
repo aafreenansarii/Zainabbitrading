@@ -6,7 +6,7 @@ import trainingImage from "@assets/stock_images/group_of_people_in_a_793b95a1.jp
 import freelanceImage from "@assets/stock_images/business_meeting_con_e4b19421.jpg";
 import consultingImage from "@assets/stock_images/professional_woman_w_62468fac.jpg";
 import ContactForm from "@/components/contact-form";
-import logo from "@assets/generated_images/zbt_logo_design_orange_pink_fashion.png";
+import logo from "@assets/only_ZBT_1766448125486.jpeg";
 
 export default function Home() {
   const [hoveredService, setHoveredService] = useState<string | null>(null);

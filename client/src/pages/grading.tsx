@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, Star, Zap, Clock, CheckCircle } from "lucide-react";
 import { Link } from "wouter";
 import gradingImage from "@assets/stock_images/professional_woman_w_62468fac.jpg";
-import logo from "@assets/generated_images/zbt_logo_design_orange_pink_fashion.png";
+import logo from "@assets/only_ZBT_1766448125486.jpeg";
 
 export default function Grading() {
   const fadeInUp = {

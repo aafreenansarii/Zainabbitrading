@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, Star, Users, Clock, Award } from "lucide-react";
 import { Link } from "wouter";
 import trainingImage from "@assets/stock_images/group_of_people_in_a_793b95a1.jpg";
-import logo from "@assets/generated_images/zbt_logo_design_orange_pink_fashion.png";
+import logo from "@assets/only_ZBT_1766448125486.jpeg";
 
 export default function Training() {
   const fadeInUp = {
