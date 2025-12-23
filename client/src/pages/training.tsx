@@ -1,10 +1,26 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, Star, Users, Clock, Award } from "lucide-react";
+import { ArrowLeft, Star, Users, Clock, Award, ArrowUp } from "lucide-react";
 import { Link } from "wouter";
-import trainingImage from "@assets/stock_images/group_of_people_in_a_793b95a1.jpg";
+import { useState, useEffect } from "react";
+import trainingImage from "@assets/stock_images/professional_woman_t_dad03893.jpg";
+import heroImage from "@assets/hero_1766450847632.png";
 import logo from "@assets/only_ZBT_1766448125486.jpeg";
 
 export default function Training() {
+  const [showScrollTop, setShowScrollTop] = useState(false);
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 300);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const fadeInUp = {
     initial: { opacity: 0, y: 30 },
     whileInView: { opacity: 1, y: 0 },
@@ -15,51 +31,54 @@ export default function Training() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border shadow-sm">
+      <nav className="sticky top-0 z-50 bg-white/98 backdrop-blur-lg border-b border-border/50 shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition">
+          <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition">
             <img src={logo} alt="Zainab Bi Trading" className="w-10 h-10 object-contain" />
-            <span className="font-bold text-sm text-secondary">Back to Home</span>
+            <div className="flex flex-col">
+              <span className="font-bold text-sm bg-gradient-to-r from-red-500 via-pink-500 to-yellow-500 bg-clip-text text-transparent">Zainab Bi Trading</span>
+              <span className="text-xs text-muted-foreground font-semibold">Back to Home</span>
+            </div>
           </Link>
-          <span className="font-bold text-lg text-secondary">Professional Training</span>
+          <span className="font-bold text-lg text-secondary hidden md:block">Professional Training</span>
           <div className="w-10 h-10"></div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <motion.section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/10 via-accent/5 to-primary/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+      <motion.section 
+        className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
+        style={{
+          backgroundImage: `url(${heroImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60"></div>
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="flex items-center justify-center">
             <motion.div {...fadeInUp}>
-              <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6">
-                Professional Pattern Making <span className="text-primary">Training</span>
+              <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6 text-white">
+                Professional Pattern Making <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Training</span>
               </h1>
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+              <p className="text-lg text-gray-200 mb-8 leading-relaxed font-medium">
                 Master the art of pattern making with 22 years of industry expertise. Learn both manual techniques and Richpeace CAD software from a professional pattern maker working with global brands.
               </p>
               <div className="flex flex-col gap-4">
                 <div className="flex items-center gap-3">
-                  <Users className="w-6 h-6 text-primary" />
-                  <span className="font-semibold">One-on-One Sessions</span>
+                  <Users className="w-6 h-6 text-white" />
+                  <span className="font-semibold text-white">One-on-One Sessions</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Clock className="w-6 h-6 text-primary" />
-                  <span className="font-semibold">Flexible Schedule</span>
+                  <Clock className="w-6 h-6 text-white" />
+                  <span className="font-semibold text-white">Flexible Schedule</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Award className="w-6 h-6 text-primary" />
-                  <span className="font-semibold">Hands-On Learning</span>
+                  <Award className="w-6 h-6 text-white" />
+                  <span className="font-semibold text-white">Hands-On Learning</span>
                 </div>
               </div>
-            </motion.div>
-            <motion.div
-              className="relative rounded-2xl overflow-hidden shadow-2xl"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <img src={trainingImage} alt="Training session" className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
             </motion.div>
           </div>
         </div>
@@ -83,11 +102,6 @@ export default function Training() {
                 title: "Richpeace CAD Software",
                 desc: "Professional digital pattern design used by global fashion brands and factories",
                 skills: ["Pattern digitization", "Digital grading", "Production-ready files"],
-              },
-              {
-                title: "Garment Types",
-                desc: "Master patterns for various categories and styles",
-                skills: ["Western wear", "Formal & casual", "All body types"],
               },
               {
                 title: "Professional Skills",
@@ -119,19 +133,20 @@ export default function Training() {
       </motion.section>
 
       {/* CTA Section */}
-      <motion.section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-secondary to-primary" {...fadeInUp}>
+      <motion.section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-purple-600" {...fadeInUp}>
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-serif text-4xl font-bold text-white mb-6">Ready to Start Your Training?</h2>
           <p className="text-lg text-white/90 mb-8">
             Contact us to discuss your learning goals and schedule your sessions.
           </p>
-          <a
-            href="mailto:zainabbitrading@gmail.com"
-            data-testid="button-training-contact"
-            className="inline-block bg-white text-primary px-10 py-4 rounded-lg font-bold text-lg hover:bg-white/90 transition shadow-lg hover:shadow-xl"
-          >
-            Inquire Now
-          </a>
+          <Link href="/#contact">
+            <a
+              data-testid="button-training-contact"
+              className="inline-block bg-white text-blue-600 px-10 py-4 rounded-lg font-bold text-lg hover:bg-white/90 transition shadow-lg hover:shadow-xl"
+            >
+              Inquire Now
+            </a>
+          </Link>
         </div>
       </motion.section>
 
@@ -154,10 +169,72 @@ export default function Training() {
         </div>
       </motion.section>
 
+      {/* Scroll to Top Button */}
+      {showScrollTop && (
+        <motion.button
+          onClick={scrollToTop}
+          className="fixed bottom-8 right-8 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-110 z-40"
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0 }}
+          data-testid="button-scroll-to-top"
+        >
+          <ArrowUp className="w-6 h-6" />
+        </motion.button>
+      )}
+
       {/* Footer */}
-      <footer className="bg-secondary text-white py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <p className="text-white/70">© 2024 Zainab Bi Trading. All rights reserved.</p>
+      <footer className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-4 gap-12 mb-12">
+            {/* Brand Section */}
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <img src={logo} alt="Zainab Bi Trading" className="w-12 h-12 object-contain" />
+                <div className="flex flex-col">
+                  <span className="font-bold text-lg">Zainab Bi Trading</span>
+                  <span className="text-xs text-gray-400">By A.M Ansari</span>
+                </div>
+              </div>
+              <p className="text-gray-400 text-sm">22 years of excellence in pattern making, training, and freelancing services.</p>
+            </div>
+
+            {/* Quick Links */}
+            <div>
+              <h4 className="font-bold text-lg mb-4">Quick Links</h4>
+              <ul className="space-y-2">
+                <li><Link href="/#about" className="text-gray-400 hover:text-white transition">About Us</Link></li>
+                <li><Link href="/#contact" className="text-gray-400 hover:text-white transition">Contact Us</Link></li>
+                <li><a href="https://maps.google.com/?q=Shop+No.+01,+Solan+Garden+Opp.+Fitness+Pro+Kanakia+Road,+Beverly+Park,+Mira+Road+East,+Mumbai,+Mira+Bhayandar,+401107" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">Store Location</a></li>
+              </ul>
+            </div>
+
+            {/* Our Services */}
+            <div>
+              <h4 className="font-bold text-lg mb-4">Our Services</h4>
+              <ul className="space-y-2">
+                <li><Link href="/training" className="text-gray-400 hover:text-white transition">Professional Training</Link></li>
+                <li><Link href="/grading" className="text-gray-400 hover:text-white transition">Grading & Marking</Link></li>
+                <li><Link href="/freelancing" className="text-gray-400 hover:text-white transition">Freelance Services</Link></li>
+              </ul>
+            </div>
+
+            {/* Contact Info */}
+            <div>
+              <h4 className="font-bold text-lg mb-4">Get In Touch</h4>
+              <ul className="space-y-2 text-gray-400 text-sm">
+                <li><span className="font-semibold text-white">Phone:</span> +91 90295 98867</li>
+                <li><span className="font-semibold text-white">Email:</span> <a href="mailto:zainabbitrading@gmail.com" className="text-gray-400 hover:text-white transition">zainabbitrading@gmail.com</a></li>
+                <li><span className="font-semibold text-white">Hours:</span> Mon-Sat, 9:30 AM - 7:00 PM</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="border-t border-white/10 pt-10">
+            <p className="text-center text-gray-400 text-sm">
+              © 2024 Zainab Bi Trading. All rights reserved.
+            </p>
+          </div>
         </div>
       </footer>
     </div>

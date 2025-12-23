@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Zap, Users, Briefcase, Phone, Mail, MapPin, ArrowRight, Star } from "lucide-react";
+import { BookOpen, Grid3x3, Briefcase, Phone, Mail, MapPin, ArrowRight, Star } from "lucide-react";
 import { Link } from "wouter";
 import trainingImage from "@assets/stock_images/group_of_people_in_a_793b95a1.jpg";
 import freelanceImage from "@assets/stock_images/business_meeting_con_e4b19421.jpg";
@@ -64,10 +64,6 @@ export default function Home() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="flex items-center justify-center">
             <motion.div {...fadeInUp}>
-              <div className="inline-flex items-center gap-2 mb-8 bg-gradient-to-r from-red-400 to-yellow-400 px-4 py-2 rounded-full border border-red-300 shadow-lg">
-                <Zap className="w-5 h-5 text-white" />
-                <span className="text-sm font-bold text-white">Expert Training & Freelancing</span>
-              </div>
               <h1 className="font-serif text-6xl md:text-7xl font-bold mb-8 leading-tight text-white">
                 Master <span className="bg-gradient-to-r from-red-400 via-pink-400 to-yellow-400 bg-clip-text text-transparent">Pattern Making</span>
               </h1>
@@ -84,13 +80,6 @@ export default function Home() {
                     Get Started <ArrowRight className="w-5 h-5" />
                   </motion.button>
                 </a>
-                <motion.button 
-                  data-testid="button-learn-more" 
-                  className="border-2 border-blue-500 text-blue-600 px-10 py-4 rounded-xl font-bold hover:bg-blue-50 transition text-lg"
-                  whileHover={{ y: -2 }}
-                >
-                  Learn More
-                </motion.button>
               </div>
             </motion.div>
           </div>
@@ -125,7 +114,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-blue-400/0 to-purple-400/0 group-hover:from-blue-400/10 group-hover:to-purple-400/10 transition-all duration-300"></div>
               <div className="relative z-10">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-xl flex items-center justify-center mb-6 shadow-lg">
-                  <Users className="w-8 h-8 text-white" />
+                  <BookOpen className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-3xl font-bold mb-4 text-gray-900">Professional Training</h3>
                 <p className="text-gray-700 mb-6 leading-relaxed font-medium">
@@ -162,7 +151,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-orange-400/0 to-pink-400/0 group-hover:from-orange-400/10 group-hover:to-pink-400/10 transition-all duration-300"></div>
               <div className="relative z-10">
                 <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-pink-500 rounded-xl flex items-center justify-center mb-6 shadow-lg">
-                  <Zap className="w-8 h-8 text-white" />
+                  <Grid3x3 className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-3xl font-bold mb-4 text-gray-900">Grading & Marking</h3>
                 <p className="text-gray-700 mb-6 leading-relaxed font-medium">
@@ -405,7 +394,7 @@ export default function Home() {
                 <img src={logo} alt="Zainab Bi Trading" className="w-12 h-12 object-contain" />
                 <div className="flex flex-col">
                   <span className="font-bold text-lg">Zainab Bi Trading</span>
-                  <span className="text-xs text-gray-400">Pattern Making Expert</span>
+                  <span className="text-xs text-gray-400">By A.M Ansari</span>
                 </div>
               </div>
               <p className="text-gray-400 text-sm">22 years of excellence in pattern making, training, and freelancing services.</p>
