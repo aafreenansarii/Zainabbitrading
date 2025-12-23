@@ -62,7 +62,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60"></div>
         
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div className="flex items-center justify-center">
             <motion.div {...fadeInUp}>
               <div className="inline-flex items-center gap-2 mb-8 bg-gradient-to-r from-red-400 to-yellow-400 px-4 py-2 rounded-full border border-red-300 shadow-lg">
                 <Zap className="w-5 h-5 text-white" />
@@ -91,21 +91,6 @@ export default function Home() {
                 >
                   Learn More
                 </motion.button>
-              </div>
-            </motion.div>
-            <motion.div
-              className="relative"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
-                <img
-                  src={trainingImage}
-                  alt="Pattern making training class"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
               </div>
             </motion.div>
           </div>
