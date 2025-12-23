@@ -47,36 +47,41 @@ export default function Home() {
 
       {/* Hero Section */}
       <motion.section
-        className="relative py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 overflow-hidden"
+        className="relative py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 via-purple-900 to-red-900 overflow-hidden"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-        <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-red-300/30 to-yellow-300/30 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-blue-300/30 to-purple-300/30 rounded-full blur-3xl"></div>
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;utf8,<svg width=60 height=60 viewBox=0 0 60 60 xmlns=http://www.w3.org/2000/svg><g fill=none fill-rule=evenodd><g fill=%23ffffff fill-opacity=0.1><path d=M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/></g></g></svg>')]"></div>
+        </div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-red-400/30 to-yellow-400/30 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-blue-400/30 to-purple-400/30 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-gradient-to-br from-pink-400/20 to-purple-400/20 rounded-full blur-3xl"></div>
         
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <motion.div {...fadeInUp}>
-              <div className="inline-flex items-center gap-2 mb-8 bg-gradient-to-r from-red-100 to-yellow-100 px-4 py-2 rounded-full border border-red-200">
-                <Zap className="w-5 h-5 text-red-500" />
-                <span className="text-sm font-bold bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">Expert Training & Freelancing</span>
+              <div className="inline-flex items-center gap-2 mb-8 bg-gradient-to-r from-red-400 to-yellow-400 px-4 py-2 rounded-full border border-red-300 shadow-lg">
+                <Zap className="w-5 h-5 text-white" />
+                <span className="text-sm font-bold text-white">Expert Training & Freelancing</span>
               </div>
-              <h1 className="font-serif text-6xl md:text-7xl font-bold mb-8 leading-tight">
-                Master <span className="bg-gradient-to-r from-red-500 via-pink-500 to-yellow-500 bg-clip-text text-transparent">Pattern Making</span>
+              <h1 className="font-serif text-6xl md:text-7xl font-bold mb-8 leading-tight text-white">
+                Master <span className="bg-gradient-to-r from-red-400 via-pink-400 to-yellow-400 bg-clip-text text-transparent">Pattern Making</span>
               </h1>
-              <p className="text-xl text-gray-700 mb-10 leading-relaxed font-medium">
+              <p className="text-xl text-gray-200 mb-10 leading-relaxed font-medium">
                 Learn both manual & CAD techniques from a 22-year industry expert. Transform your skills with hands-on training in Mira Road.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <motion.button 
-                  data-testid="button-get-started" 
-                  className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-10 py-4 rounded-xl font-bold hover:shadow-2xl transition-all text-lg flex items-center justify-center gap-2 shadow-lg hover:scale-105"
-                  whileHover={{ y: -2 }}
-                >
-                  Get Started <ArrowRight className="w-5 h-5" />
-                </motion.button>
+                <a href="#services">
+                  <motion.button 
+                    data-testid="button-get-started" 
+                    className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-10 py-4 rounded-xl font-bold hover:shadow-2xl transition-all text-lg flex items-center justify-center gap-2 shadow-lg hover:scale-105"
+                    whileHover={{ y: -2 }}
+                  >
+                    Get Started <ArrowRight className="w-5 h-5" />
+                  </motion.button>
+                </a>
                 <motion.button 
                   data-testid="button-learn-more" 
                   className="border-2 border-blue-500 text-blue-600 px-10 py-4 rounded-xl font-bold hover:bg-blue-50 transition text-lg"
@@ -234,33 +239,6 @@ export default function Home() {
         </div>
       </motion.section>
 
-      {/* Process Section */}
-      <motion.section className="py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-900 to-indigo-900 text-white" {...staggerContainer}>
-        <div className="max-w-7xl mx-auto">
-          <motion.div className="text-center mb-20" {...fadeInUp}>
-            <h2 className="font-serif text-6xl md:text-7xl font-bold mb-6">How We Work</h2>
-            <p className="text-xl font-medium text-purple-100">Simple, transparent, and professional process</p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-4 gap-8">
-            {[
-              { num: "01", title: "Consultation", desc: "Understand your needs and goals" },
-              { num: "02", title: "Assessment", desc: "Evaluate your current skills" },
-              { num: "03", title: "Training", desc: "Personalized hands-on learning" },
-              { num: "04", title: "Delivery", desc: "Professional results & support" },
-            ].map((step, idx) => (
-              <motion.div key={idx} {...fadeInUp} data-testid={`card-process-${step.num}`} whileHover={{ y: -4 }}>
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-white/50 transition-all">
-                  <div className="text-5xl font-bold bg-gradient-to-r from-purple-300 to-pink-300 bg-clip-text text-transparent mb-4">{step.num}</div>
-                  <h3 className="text-2xl font-bold mb-3">{step.title}</h3>
-                  <p className="text-purple-100">{step.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </motion.section>
-
       {/* About Section */}
       <motion.section id="about" className="py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white" {...staggerContainer}>
         <div className="max-w-7xl mx-auto">
@@ -273,7 +251,7 @@ export default function Home() {
               />
             </motion.div>
             <motion.div {...fadeInUp}>
-              <h2 className="font-serif text-6xl md:text-7xl font-bold mb-8 leading-tight">About <span className="bg-gradient-to-r from-red-500 via-pink-500 to-yellow-500 bg-clip-text text-transparent">Zainab Bi</span></h2>
+              <h2 className="font-serif text-6xl md:text-7xl font-bold mb-8 leading-tight">About <span className="bg-gradient-to-r from-red-500 via-pink-500 to-yellow-500 bg-clip-text text-transparent">A.M Ansari</span></h2>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed font-medium">
                 I am a professional pattern maker with 22 years of industry experience, working with designers, brands, factories, startups, and individual clients worldwide. I create manual and CAD patterns for menswear, womenswear, and kidswear, including western, formal, and casual garments, along with grading, scaling, and marking.
               </p>
@@ -348,7 +326,8 @@ export default function Home() {
             <p className="text-xl text-gray-600 font-medium">We'd love to hear from you</p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Location Card */}
             <a
               href="https://maps.google.com/?q=Shop+No.+01,+Solan+Garden+Opp.+Fitness+Pro+Kanakia+Road,+Beverly+Park,+Mira+Road+East,+Mumbai,+Mira+Bhayandar,+401107"
               target="_blank"
@@ -368,39 +347,63 @@ export default function Home() {
               </motion.div>
             </a>
 
-            <a
-              href="https://wa.me/919029598867?text=Hello%2C%20I%27m%20interested%20in%20your%20pattern%20making%20services"
-              target="_blank"
-              rel="noopener noreferrer"
+            {/* Work Hours Card */}
+            <motion.div
+              className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl border-2 border-purple-200 p-10 text-center hover:border-purple-400 hover:shadow-2xl transition-all cursor-pointer min-h-80"
+              whileHover={{ y: -8, scale: 1.02 }}
+              {...fadeInUp}
+              data-testid="card-contact-hours"
             >
-              <motion.div
-                className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl border-2 border-green-200 p-10 text-center hover:border-green-400 hover:shadow-2xl transition-all cursor-pointer min-h-80"
-                whileHover={{ y: -8, scale: 1.02 }}
-                {...fadeInUp}
-                data-testid="card-contact-phone"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-teal-500 rounded-xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-                  <Phone className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="font-bold text-2xl mb-4 text-gray-900">Phone</h3>
-                <p className="text-gray-700 text-sm leading-relaxed font-medium">+91 90295 98867<br />Available on WhatsApp</p>
-              </motion.div>
-            </a>
+              <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="font-bold text-2xl mb-4 text-gray-900">Work Hours</h3>
+              <p className="text-gray-700 text-sm leading-relaxed font-medium">
+                <span className="block font-bold text-base mb-2">Monday to Saturday</span>
+                9:30 AM - 7:00 PM
+              </p>
+            </motion.div>
 
-            <a href="mailto:zainabbitrading@gmail.com">
-              <motion.div
-                className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl border-2 border-blue-200 p-10 text-center hover:border-blue-400 hover:shadow-2xl transition-all cursor-pointer min-h-80"
-                whileHover={{ y: -8, scale: 1.02 }}
-                {...fadeInUp}
-                data-testid="card-contact-email"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-                  <Mail className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="font-bold text-2xl mb-4 text-gray-900">Email</h3>
-                <p className="text-gray-700 text-sm leading-relaxed font-medium">zainabbitrading@gmail.com</p>
-              </motion.div>
-            </a>
+            {/* Phone & Email Card */}
+            <div className="md:col-span-2">
+              <div className="grid md:grid-cols-2 gap-8">
+                <a
+                  href="https://wa.me/919029598867?text=Hello%2C%20I%27m%20interested%20in%20your%20pattern%20making%20services"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <motion.div
+                    className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl border-2 border-green-200 p-10 text-center hover:border-green-400 hover:shadow-2xl transition-all cursor-pointer min-h-60"
+                    whileHover={{ y: -8, scale: 1.02 }}
+                    {...fadeInUp}
+                    data-testid="card-contact-phone"
+                  >
+                    <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-teal-500 rounded-xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                      <Phone className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="font-bold text-2xl mb-4 text-gray-900">Phone</h3>
+                    <p className="text-gray-700 text-sm leading-relaxed font-medium">+91 90295 98867<br />Available on WhatsApp</p>
+                  </motion.div>
+                </a>
+
+                <a href="mailto:zainabbitrading@gmail.com">
+                  <motion.div
+                    className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl border-2 border-blue-200 p-10 text-center hover:border-blue-400 hover:shadow-2xl transition-all cursor-pointer min-h-60"
+                    whileHover={{ y: -8, scale: 1.02 }}
+                    {...fadeInUp}
+                    data-testid="card-contact-email"
+                  >
+                    <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                      <Mail className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="font-bold text-2xl mb-4 text-gray-900">Email</h3>
+                    <p className="text-gray-700 text-sm leading-relaxed font-medium">zainabbitrading@gmail.com</p>
+                  </motion.div>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </motion.section>
@@ -408,16 +411,50 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center mb-10">
-            <div className="flex items-center gap-3 mb-6 md:mb-0">
-              <img src={logo} alt="Zainab Bi Trading" className="w-12 h-12 object-contain" />
-              <div className="flex flex-col">
-                <span className="font-bold text-lg">Zainab Bi Trading</span>
-                <span className="text-xs text-gray-400">Professional Pattern Making</span>
+          <div className="grid md:grid-cols-4 gap-12 mb-12">
+            {/* Brand Section */}
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <img src={logo} alt="Zainab Bi Trading" className="w-12 h-12 object-contain" />
+                <div className="flex flex-col">
+                  <span className="font-bold text-lg">Zainab Bi Trading</span>
+                  <span className="text-xs text-gray-400">Pattern Making Expert</span>
+                </div>
               </div>
+              <p className="text-gray-400 text-sm">22 years of excellence in pattern making, training, and freelancing services.</p>
             </div>
-            <p className="text-gray-300 text-sm text-center md:text-right font-medium">Mira Road, Mumbai | Manual & CAD Pattern Making | Richpeace & Tuka Software</p>
+
+            {/* Quick Links */}
+            <div>
+              <h4 className="font-bold text-lg mb-4">Quick Links</h4>
+              <ul className="space-y-2">
+                <li><a href="#about" className="text-gray-400 hover:text-white transition">About Us</a></li>
+                <li><a href="#contact" className="text-gray-400 hover:text-white transition">Contact Us</a></li>
+                <li><a href="https://maps.google.com/?q=Shop+No.+01,+Solan+Garden+Opp.+Fitness+Pro+Kanakia+Road,+Beverly+Park,+Mira+Road+East,+Mumbai,+Mira+Bhayandar,+401107" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">Store Location</a></li>
+              </ul>
+            </div>
+
+            {/* Our Services */}
+            <div>
+              <h4 className="font-bold text-lg mb-4">Our Services</h4>
+              <ul className="space-y-2">
+                <li><a href="/training" className="text-gray-400 hover:text-white transition">Professional Training</a></li>
+                <li><a href="/grading" className="text-gray-400 hover:text-white transition">Grading & Marking</a></li>
+                <li><a href="/freelancing" className="text-gray-400 hover:text-white transition">Freelance Services</a></li>
+              </ul>
+            </div>
+
+            {/* Contact Info */}
+            <div>
+              <h4 className="font-bold text-lg mb-4">Get In Touch</h4>
+              <ul className="space-y-2 text-gray-400 text-sm">
+                <li><span className="font-semibold text-white">Phone:</span> +91 90295 98867</li>
+                <li><span className="font-semibold text-white">Email:</span> <a href="mailto:zainabbitrading@gmail.com" className="text-gray-400 hover:text-white transition">zainabbitrading@gmail.com</a></li>
+                <li><span className="font-semibold text-white">Hours:</span> Mon-Sat, 9:30 AM - 7:00 PM</li>
+              </ul>
+            </div>
           </div>
+
           <div className="border-t border-white/10 pt-10">
             <p className="text-center text-gray-400 text-sm">
               © 2024 Zainab Bi Trading. All rights reserved.
