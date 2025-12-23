@@ -190,6 +190,7 @@ export default function Home() {
                     <span>Quick turnaround</span>
                   </li>
                 </ul>
+              </div>
               </motion.div>
             </Link>
 
