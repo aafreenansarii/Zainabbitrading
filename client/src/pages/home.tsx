@@ -7,6 +7,7 @@ import freelanceImage from "@assets/stock_images/business_meeting_con_e4b19421.j
 import consultingImage from "@assets/stock_images/professional_woman_w_62468fac.jpg";
 import ContactForm from "@/components/contact-form";
 import logo from "@assets/only_ZBT_1766448125486.jpeg";
+import heroImage from "@assets/hero_1766450847632.png";
 
 export default function Home() {
   const [hoveredService, setHoveredService] = useState<string | null>(null);
@@ -47,17 +48,18 @@ export default function Home() {
 
       {/* Hero Section */}
       <motion.section
-        className="relative py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 via-purple-900 to-red-900 overflow-hidden"
+        className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
+        style={{
+          backgroundImage: `url(${heroImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml;utf8,<svg width=60 height=60 viewBox=0 0 60 60 xmlns=http://www.w3.org/2000/svg><g fill=none fill-rule=evenodd><g fill=%23ffffff fill-opacity=0.1><path d=M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/></g></g></svg>')]"></div>
-        </div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-red-400/30 to-yellow-400/30 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-blue-400/30 to-purple-400/30 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-gradient-to-br from-pink-400/20 to-purple-400/20 rounded-full blur-3xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60"></div>
         
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -113,7 +115,7 @@ export default function Home() {
       {/* Services Section */}
       <motion.section
         id="services"
-        className="py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50"
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50"
         {...staggerContainer}
       >
         <div className="max-w-7xl mx-auto">
@@ -240,7 +242,7 @@ export default function Home() {
       </motion.section>
 
       {/* About Section */}
-      <motion.section id="about" className="py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white" {...staggerContainer}>
+      <motion.section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white" {...staggerContainer}>
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <motion.div {...fadeInUp}>
@@ -293,7 +295,7 @@ export default function Home() {
       </motion.section>
 
       {/* CTA Section */}
-      <motion.section className="py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-500 via-pink-500 to-yellow-500" {...fadeInUp}>
+      <motion.section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-500 via-pink-500 to-yellow-500" {...fadeInUp}>
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-serif text-6xl md:text-7xl font-bold text-white mb-8">
             Ready to Transform?
@@ -319,7 +321,7 @@ export default function Home() {
       </motion.section>
 
       {/* Contact Section */}
-      <motion.section id="contact" className="py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-100" {...staggerContainer}>
+      <motion.section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-100" {...staggerContainer}>
         <div className="max-w-7xl mx-auto">
           <motion.div className="text-center mb-20" {...fadeInUp}>
             <h2 className="font-serif text-6xl md:text-7xl font-bold mb-6">Get In Touch</h2>
