@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { BookOpen, Grid3x3, Briefcase, Phone, Mail, MapPin, ArrowRight, Star } from "lucide-react";
+import { BookOpen, Grid3x3, Briefcase, Phone, Mail, MapPin, ArrowRight, Star, ArrowUp } from "lucide-react";
 import { Link } from "wouter";
 import trainingImage from "@assets/stock_images/group_of_people_in_a_793b95a1.jpg";
 import freelanceImage from "@assets/stock_images/business_meeting_con_e4b19421.jpg";
@@ -11,6 +11,19 @@ import heroImage from "@assets/hero_1766450847632.png";
 
 export default function Home() {
   const [hoveredService, setHoveredService] = useState<string | null>(null);
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 300);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const fadeInUp = {
     initial: { opacity: 0, y: 30 },
@@ -277,18 +290,20 @@ export default function Home() {
           <p className="text-xl text-white/95 mb-10 font-medium">
             Join our training programs or hire us for your freelance needs. Let's create something amazing together.
           </p>
-          <motion.button 
-            data-testid="button-contact-cta" 
-            className="bg-white text-pink-600 px-12 py-4 rounded-xl font-bold text-lg hover:bg-white/90 transition shadow-2xl hover:shadow-xl"
-            whileHover={{ scale: 1.05 }}
-          >
-            Get in Touch Today
-          </motion.button>
+          <a href="#contact-form">
+            <motion.button 
+              data-testid="button-contact-cta" 
+              className="bg-white text-pink-600 px-12 py-4 rounded-xl font-bold text-lg hover:bg-white/90 transition shadow-2xl hover:shadow-xl"
+              whileHover={{ scale: 1.05 }}
+            >
+              Get in Touch Today
+            </motion.button>
+          </a>
         </div>
       </motion.section>
 
       {/* Contact Form Section */}
-      <motion.section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50" {...staggerContainer}>
+      <motion.section id="contact-form" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50" {...staggerContainer}>
         <div className="max-w-7xl mx-auto">
           <ContactForm />
         </div>
@@ -383,6 +398,20 @@ export default function Home() {
           </div>
         </div>
       </motion.section>
+
+      {/* Scroll to Top Button */}
+      {showScrollTop && (
+        <motion.button
+          onClick={scrollToTop}
+          className="fixed bottom-8 right-8 bg-gradient-to-r from-red-500 via-pink-500 to-yellow-500 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-110 z-40"
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0 }}
+          data-testid="button-scroll-to-top"
+        >
+          <ArrowUp className="w-6 h-6" />
+        </motion.button>
+      )}
 
       {/* Footer */}
       <footer className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-16 px-4 sm:px-6 lg:px-8">

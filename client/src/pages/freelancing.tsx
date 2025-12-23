@@ -41,7 +41,11 @@ export default function Freelancing() {
             </div>
           </Link>
           <span className="font-bold text-lg text-secondary hidden md:block">Freelance Services</span>
-          <div className="w-10 h-10"></div>
+          <div className="flex items-center gap-6">
+            <Link href="/#services" className="text-sm font-semibold text-gray-700 hover:text-green-600 transition">Services</Link>
+            <Link href="/#about" className="text-sm font-semibold text-gray-700 hover:text-green-600 transition">About</Link>
+            <Link href="/#contact-form" className="text-sm font-semibold text-gray-700 hover:text-green-600 transition">Contact</Link>
+          </div>
         </div>
       </nav>
 
@@ -176,14 +180,9 @@ export default function Freelancing() {
           <p className="text-lg text-white/90 mb-8">
             Let's discuss your project requirements and find the perfect freelance solution.
           </p>
-          <Link href="/#contact">
-            <a
-              data-testid="button-freelance-contact"
-              className="inline-block bg-white text-green-600 px-10 py-4 rounded-lg font-bold text-lg hover:bg-white/90 transition shadow-lg hover:shadow-xl"
-            >
-              Inquire Now
-            </a>
-          </Link>
+          <a href="/#contact-form" data-testid="button-freelance-contact" className="inline-block bg-white text-green-600 px-10 py-4 rounded-lg font-bold text-lg hover:bg-white/90 transition shadow-lg hover:shadow-xl">
+            Inquire Now
+          </a>
         </div>
       </motion.section>
 
