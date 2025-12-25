@@ -318,7 +318,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8">
             {/* Location Card */}
             <a
-              href="https://maps.google.com/?q=Shop+No.+01,+Solan+Garden+Opp.+Fitness+Pro+Kanakia+Road,+Beverly+Park,+Mira+Road+East,+Mumbai,+Mira+Bhayandar,+401107"
+              href="https://maps.google.com/?q=Shop+No.+06,+Kanakia+Rd,+opp.+Fitness+pro,+Unique+Gardens,+Beverly+Park,+Mira+Road+East,+Mumbai,+Mira+Bhayandar,+Maharashtra+401107,+India"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -332,7 +332,7 @@ export default function Home() {
                   <MapPin className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="font-bold text-2xl mb-4 text-gray-900">Location</h3>
-                <p className="text-gray-700 text-sm leading-relaxed font-medium">Shop No. 01, Solan Garden Opp. Fitness Pro Kanakia Road, Beverly Park, Mira Road East, Mumbai, Mira Bhayandar - 401107</p>
+                <p className="text-gray-700 text-sm leading-relaxed font-medium">Shop No. 06, Kanakia Rd, opp. Fitness pro, Unique Gardens, Beverly Park, Mira Road East, Mumbai, Mira Bhayandar, Maharashtra 401107, India</p>
               </motion.div>
             </a>
 
@@ -433,7 +433,7 @@ export default function Home() {
               <ul className="space-y-2">
                 <li><a href="#about" className="text-gray-400 hover:text-white transition">About Us</a></li>
                 <li><a href="#contact" className="text-gray-400 hover:text-white transition">Contact Us</a></li>
-                <li><a href="https://maps.google.com/?q=Shop+No.+01,+Solan+Garden+Opp.+Fitness+Pro+Kanakia+Road,+Beverly+Park,+Mira+Road+East,+Mumbai,+Mira+Bhayandar,+401107" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">Store Location</a></li>
+                <li><a href="https://maps.google.com/?q=Shop+No.+06,+Kanakia+Rd,+opp.+Fitness+pro,+Unique+Gardens,+Beverly+Park,+Mira+Road+East,+Mumbai,+Mira+Bhayandar,+Maharashtra+401107,+India" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">Store Location</a></li>
               </ul>
             </div>
 

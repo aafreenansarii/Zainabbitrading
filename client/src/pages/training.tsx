@@ -203,7 +203,7 @@ export default function Training() {
               <ul className="space-y-2">
                 <li><Link href="/#about" className="text-gray-400 hover:text-white transition">About Us</Link></li>
                 <li><Link href="/#contact" className="text-gray-400 hover:text-white transition">Contact Us</Link></li>
-                <li><a href="https://maps.google.com/?q=Shop+No.+01,+Solan+Garden+Opp.+Fitness+Pro+Kanakia+Road,+Beverly+Park,+Mira+Road+East,+Mumbai,+Mira+Bhayandar,+401107" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">Store Location</a></li>
+                <li><a href="https://maps.google.com/?q=Shop+No.+06,+Kanakia+Rd,+opp.+Fitness+pro,+Unique+Gardens,+Beverly+Park,+Mira+Road+East,+Mumbai,+Mira+Bhayandar,+Maharashtra+401107,+India" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">Store Location</a></li>
               </ul>
             </div>
 
