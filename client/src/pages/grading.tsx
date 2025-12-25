@@ -227,7 +227,7 @@ export default function Grading() {
               <h4 className="font-bold text-lg mb-4">Get In Touch</h4>
               <ul className="space-y-2 text-gray-400 text-sm">
                 <li><span className="font-semibold text-white">Phone:</span> +91 90295 98867</li>
-                <li><span className="font-semibold text-white">Email:</span> <a href="mailto:zainabbitrading@gmail.com" className="text-gray-400 hover:text-white transition">zainabbitrading@gmail.com</a></li>
+                <li><span className="font-semibold text-white">Email:</span> <a href="mailto:ansariaafreend@gmail.com" className="text-gray-400 hover:text-white transition">ansariaafreend@gmail.com</a></li>
                 <li><span className="font-semibold text-white">Hours:</span> Mon-Sat, 9:30 AM - 7:00 PM</li>
               </ul>
             </div>

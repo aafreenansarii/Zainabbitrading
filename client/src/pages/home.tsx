@@ -377,7 +377,7 @@ export default function Home() {
                   </motion.div>
                 </a>
 
-                <a href="mailto:zainabbitrading@gmail.com">
+                <a href="mailto:ansariaafreend@gmail.com">
                   <motion.div
                     className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl border-2 border-blue-200 p-10 text-center hover:border-blue-400 hover:shadow-2xl transition-all cursor-pointer min-h-60"
                     whileHover={{ y: -8, scale: 1.02 }}
@@ -388,7 +388,7 @@ export default function Home() {
                       <Mail className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="font-bold text-2xl mb-4 text-gray-900">Email</h3>
-                    <p className="text-gray-700 text-sm leading-relaxed font-medium">zainabbitrading@gmail.com</p>
+                    <p className="text-gray-700 text-sm leading-relaxed font-medium">ansariaafreend@gmail.com</p>
                   </motion.div>
                 </a>
               </div>
@@ -452,7 +452,7 @@ export default function Home() {
               <h4 className="font-bold text-lg mb-4">Get In Touch</h4>
               <ul className="space-y-2 text-gray-400 text-sm">
                 <li><span className="font-semibold text-white">Phone:</span> +91 90295 98867</li>
-                <li><span className="font-semibold text-white">Email:</span> <a href="mailto:zainabbitrading@gmail.com" className="text-gray-400 hover:text-white transition">zainabbitrading@gmail.com</a></li>
+                <li><span className="font-semibold text-white">Email:</span> <a href="mailto:ansariaafreend@gmail.com" className="text-gray-400 hover:text-white transition">ansariaafreend@gmail.com</a></li>
                 <li><span className="font-semibold text-white">Hours:</span> Mon-Sat, 9:30 AM - 7:00 PM</li>
               </ul>
             </div>
