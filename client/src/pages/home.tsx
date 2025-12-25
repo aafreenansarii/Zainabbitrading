@@ -100,7 +100,7 @@ export default function Home() {
       {/* Services Section */}
       <motion.section
         id="services"
-        className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50"
+        className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50"
         {...staggerContainer}
       >
         <div className="max-w-7xl mx-auto">
@@ -227,7 +227,7 @@ export default function Home() {
       </motion.section>
 
       {/* About Section */}
-      <motion.section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white" {...staggerContainer}>
+      <motion.section id="about" className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white" {...staggerContainer}>
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <motion.div {...fadeInUp}>
@@ -301,14 +301,14 @@ export default function Home() {
       </motion.section>
 
       {/* Contact Form Section */}
-      <motion.section id="contact-form" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50" {...staggerContainer}>
+      <motion.section id="contact-form" className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-50" {...staggerContainer}>
         <div className="max-w-7xl mx-auto">
           <ContactForm />
         </div>
       </motion.section>
 
       {/* Contact Section */}
-      <motion.section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-100" {...staggerContainer}>
+      <motion.section id="contact" className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-100" {...staggerContainer}>
         <div className="max-w-7xl mx-auto">
           <motion.div className="text-center mb-20" {...fadeInUp}>
             <h2 className="font-serif text-6xl md:text-7xl font-bold mb-6">Get In Touch</h2>

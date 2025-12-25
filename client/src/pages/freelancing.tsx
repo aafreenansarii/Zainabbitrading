@@ -88,7 +88,7 @@ export default function Freelancing() {
       </motion.section>
 
       {/* Services Offered */}
-      <motion.section className="py-20 px-4 sm:px-6 lg:px-8">
+      <motion.section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div className="text-center mb-16" {...fadeInUp}>
             <h2 className="font-serif text-4xl font-bold mb-4">What I Offer</h2>
@@ -151,7 +151,7 @@ export default function Freelancing() {
       </motion.section>
 
       {/* Client Types */}
-      <motion.section className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/5">
+      <motion.section className="py-12 px-4 sm:px-6 lg:px-8 bg-secondary/5">
         <div className="max-w-7xl mx-auto text-center">
           <motion.h2 className="font-serif text-4xl font-bold mb-12" {...fadeInUp}>
             Who I Work With
@@ -173,7 +173,7 @@ export default function Freelancing() {
       </motion.section>
 
       {/* CTA Section */}
-      <motion.section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-600 to-teal-600" {...fadeInUp}>
+      <motion.section className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-600 to-teal-600" {...fadeInUp}>
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-serif text-4xl font-bold text-white mb-6">Ready to Collaborate?</h2>
           <p className="text-lg text-white/90 mb-8">
@@ -186,7 +186,7 @@ export default function Freelancing() {
       </motion.section>
 
       {/* Placeholder for portfolio */}
-      <motion.section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <motion.section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="font-serif text-4xl font-bold mb-6">Portfolio</h2>
           <p className="text-lg text-muted-foreground">Featured projects and client work coming soon...</p>
