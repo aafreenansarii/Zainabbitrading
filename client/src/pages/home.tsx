@@ -4,7 +4,7 @@ import { BookOpen, Grid3x3, Briefcase, Phone, Mail, MapPin, ArrowRight, Star, Ar
 import { Link } from "wouter";
 import trainingImage from "@assets/stock_images/group_of_people_in_a_793b95a1.jpg";
 import freelanceImage from "@assets/stock_images/business_meeting_con_e4b19421.jpg";
-import consultingImage from "@assets/stock_images/professional_woman_w_62468fac.jpg";
+import professionalPhoto from "@assets/professional_photo_1766695007384.JPG";
 import ContactForm from "@/components/contact-form";
 import logo from "@assets/only_ZBT_1766448125486.jpeg";
 import heroImage from "@assets/hero_1766450847632.png";
@@ -232,9 +232,9 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <motion.div {...fadeInUp}>
               <img
-                src={freelanceImage}
-                alt="Professional consulting"
-                className="rounded-3xl shadow-2xl w-full h-full object-cover border-8 border-white"
+                src={professionalPhoto}
+                alt="A.M Ansari - Professional Pattern Maker"
+                className="rounded-3xl shadow-2xl w-full h-[500px] object-cover border-8 border-white object-top"
               />
             </motion.div>
             <motion.div {...fadeInUp}>
