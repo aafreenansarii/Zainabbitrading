@@ -4,7 +4,7 @@ import { BookOpen, Grid3x3, Briefcase, Phone, Mail, MapPin, ArrowRight, Star, Ar
 import { Link } from "wouter";
 import trainingImage from "@assets/stock_images/group_of_people_in_a_793b95a1.jpg";
 import freelanceImage from "@assets/stock_images/business_meeting_con_e4b19421.jpg";
-import professionalPhoto from "@assets/professional_photo_1766695007384.JPG";
+import professionalPhoto from "@assets/professional_photo_1766695207315.JPG";
 import ContactForm from "@/components/contact-form";
 import logo from "@assets/only_ZBT_1766448125486.jpeg";
 import heroImage from "@assets/hero_1766450847632.png";
