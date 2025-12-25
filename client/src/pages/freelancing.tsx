@@ -32,20 +32,19 @@ export default function Freelancing() {
     <div className="min-h-screen bg-background text-foreground">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/98 backdrop-blur-lg border-b border-border/50 shadow-lg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition">
-            <img src={logo} alt="Zainab Bi Trading" className="w-10 h-10 object-contain" />
-            <div className="flex flex-col">
-              <span className="font-bold text-sm bg-gradient-to-r from-red-500 via-pink-500 to-yellow-500 bg-clip-text text-transparent">Zainab Bi Trading</span>
-              <span className="text-xs text-muted-foreground font-semibold">Back to Home</span>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-28 flex flex-col items-center justify-center text-center">
+          <Link href="/" className="flex flex-col items-center">
+            <div className="flex items-center gap-4 mb-1">
+              <img src={logo} alt="Zainab Bi Trading" className="w-14 h-14 object-contain shadow-sm rounded-full" />
+              <span className="font-serif text-3xl font-extrabold tracking-tight bg-gradient-to-r from-red-600 via-pink-600 to-orange-600 bg-clip-text text-transparent drop-shadow-sm">
+                Zainab Bi Trading
+              </span>
             </div>
+            <div className="w-full max-w-md h-[2.5px] bg-gradient-to-r from-transparent via-blue-600 to-transparent mb-1 opacity-80"></div>
+            <span className="text-[10px] sm:text-xs text-blue-900 font-black uppercase tracking-[0.25em] drop-shadow-sm">
+              Manual & CAD Pattern Maker | Trainer | Freelancer
+            </span>
           </Link>
-          <span className="font-bold text-lg text-secondary hidden md:block">Freelance Services</span>
-          <div className="flex items-center gap-6">
-            <Link href="/#services" className="text-sm font-semibold text-gray-700 hover:text-green-600 transition">Services</Link>
-            <Link href="/#about" className="text-sm font-semibold text-gray-700 hover:text-green-600 transition">About</Link>
-            <Link href="/#contact-form" className="text-sm font-semibold text-gray-700 hover:text-green-600 transition">Contact</Link>
-          </div>
         </div>
       </nav>
 
