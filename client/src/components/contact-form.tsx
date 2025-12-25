@@ -22,7 +22,7 @@ export default function ContactForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    console.log("Form submitted to ansariaafreend@gmail.com:", formData);
     setSubmitted(true);
     setTimeout(() => {
       setFormData({
@@ -53,7 +53,7 @@ export default function ContactForm() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
           >
-            ✓ Thank you! We'll get back to you soon.
+            ✓ Thank you for contacting. Our team will reach out to you shortly!
           </motion.div>
         )}
 

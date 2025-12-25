@@ -99,12 +99,12 @@ export default function Training() {
               {
                 title: "Manual Pattern Making",
                 desc: "Traditional hand-drafted patterns for all garment types - menswear, womenswear, and kidswear",
-                skills: ["Basic to advanced techniques", "Measurements & grading", "Garment construction"],
+                skills: ["Basic to advanced techniques", "Measurements & grading", "Garment construction", "Interview training"],
               },
               {
-                title: "Richpeace CAD Software",
+                title: "CAD Software",
                 desc: "Professional digital pattern design used by global fashion brands and factories",
-                skills: ["Pattern digitization", "Digital grading", "Production-ready files"],
+                skills: ["On screen pattern making", "Software like Richpeace, Tuka, Gemini, Winda etc.", "Digital grading", "Production-ready files"],
               },
               {
                 title: "Professional Skills",

@@ -111,11 +111,11 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 items-stretch">
             {/* Training Service */}
             <Link href="/training">
               <motion.div
-                className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl border-2 border-blue-200 p-8 hover:border-blue-400 hover:shadow-2xl transition-all duration-300 cursor-pointer overflow-hidden relative group"
+                className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl border-2 border-blue-200 p-8 hover:border-blue-400 hover:shadow-2xl transition-all duration-300 cursor-pointer overflow-hidden relative group h-full flex flex-col"
                 onHoverStart={() => setHoveredService("training")}
                 onHoverEnd={() => setHoveredService(null)}
                 whileHover={{ y: -8, scale: 1.02 }}
@@ -123,26 +123,22 @@ export default function Home() {
                 data-testid="card-service-training"
               >
               <div className="absolute inset-0 bg-gradient-to-br from-blue-400/0 to-purple-400/0 group-hover:from-blue-400/10 group-hover:to-purple-400/10 transition-all duration-300"></div>
-              <div className="relative z-10">
+              <div className="relative z-10 flex flex-col h-full">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-xl flex items-center justify-center mb-6 shadow-lg">
                   <BookOpen className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-3xl font-bold mb-4 text-gray-900">Professional Training</h3>
-                <p className="text-gray-700 mb-6 leading-relaxed font-medium">
-                  Master pattern making with both manual and CAD software techniques. Learn from industry experts with hands-on guidance.
+                <p className="text-gray-700 mb-6 leading-relaxed font-medium flex-grow">
+                  Master pattern making with manual and CAD techniques. Learn from industry experts with hands-on guidance and interview preparation.
                 </p>
-                <ul className="space-y-3 text-sm font-semibold">
+                <ul className="space-y-3 text-sm font-semibold mt-auto">
                   <li className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500"></div>
-                    <span>Manual pattern making</span>
+                    <span>Manual & CAD training</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500"></div>
-                    <span>CAD software training</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500"></div>
-                    <span>One-on-one sessions</span>
+                    <span>Interview preparation</span>
                   </li>
                 </ul>
               </div>
@@ -152,7 +148,7 @@ export default function Home() {
             {/* Grading & Marking Service */}
             <Link href="/grading">
               <motion.div
-                className="bg-gradient-to-br from-orange-50 to-pink-50 rounded-2xl border-2 border-orange-200 p-8 hover:border-orange-400 hover:shadow-2xl transition-all duration-300 cursor-pointer overflow-hidden relative group"
+                className="bg-gradient-to-br from-orange-50 to-pink-50 rounded-2xl border-2 border-orange-200 p-8 hover:border-orange-400 hover:shadow-2xl transition-all duration-300 cursor-pointer overflow-hidden relative group h-full flex flex-col"
                 onHoverStart={() => setHoveredService("grading")}
                 onHoverEnd={() => setHoveredService(null)}
                 whileHover={{ y: -8, scale: 1.02 }}
@@ -160,26 +156,22 @@ export default function Home() {
                 data-testid="card-service-grading"
               >
               <div className="absolute inset-0 bg-gradient-to-br from-orange-400/0 to-pink-400/0 group-hover:from-orange-400/10 group-hover:to-pink-400/10 transition-all duration-300"></div>
-              <div className="relative z-10">
+              <div className="relative z-10 flex flex-col h-full">
                 <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-pink-500 rounded-xl flex items-center justify-center mb-6 shadow-lg">
                   <Grid3x3 className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-3xl font-bold mb-4 text-gray-900">Grading & Marking</h3>
-                <p className="text-gray-700 mb-6 leading-relaxed font-medium">
-                  Professional pattern grading and marking services tailored to your exact specifications and requirements.
+                <p className="text-gray-700 mb-6 leading-relaxed font-medium flex-grow">
+                  Expert grading and marking services tailored to your specifications. Precise scaling for manufacturing and designer collections.
                 </p>
-                <ul className="space-y-3 text-sm font-semibold">
+                <ul className="space-y-3 text-sm font-semibold mt-auto">
                   <li className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-gradient-to-r from-orange-500 to-pink-500"></div>
-                    <span>Precise grading</span>
+                    <span>Precise size grading</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-gradient-to-r from-orange-500 to-pink-500"></div>
-                    <span>Custom marking</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-gradient-to-r from-orange-500 to-pink-500"></div>
-                    <span>Quick turnaround</span>
+                    <span>Production marking</span>
                   </li>
                 </ul>
               </div>
@@ -189,7 +181,7 @@ export default function Home() {
             {/* Freelancing Service */}
             <Link href="/freelancing">
               <motion.div
-                className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl border-2 border-green-200 p-8 hover:border-green-400 hover:shadow-2xl transition-all duration-300 cursor-pointer overflow-hidden relative group"
+                className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl border-2 border-green-200 p-8 hover:border-green-400 hover:shadow-2xl transition-all duration-300 cursor-pointer overflow-hidden relative group h-full flex flex-col"
                 onHoverStart={() => setHoveredService("freelance")}
                 onHoverEnd={() => setHoveredService(null)}
                 whileHover={{ y: -8, scale: 1.02 }}
@@ -197,22 +189,18 @@ export default function Home() {
                 data-testid="card-service-freelance"
               >
               <div className="absolute inset-0 bg-gradient-to-br from-green-400/0 to-teal-400/0 group-hover:from-green-400/10 group-hover:to-teal-400/10 transition-all duration-300"></div>
-              <div className="relative z-10">
+              <div className="relative z-10 flex flex-col h-full">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-teal-500 rounded-xl flex items-center justify-center mb-6 shadow-lg">
                   <Briefcase className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-3xl font-bold mb-4 text-gray-900">Freelance Services</h3>
-                <p className="text-gray-700 mb-6 leading-relaxed font-medium">
-                  Expert freelancing support for your pattern making, design, and production needs. Flexible and professional solutions.
+                <p className="text-gray-700 mb-6 leading-relaxed font-medium flex-grow">
+                  Global freelancing support for pattern making and production. Flexible solutions for brands, factories, and fashion startups.
                 </p>
-                <ul className="space-y-3 text-sm font-semibold">
+                <ul className="space-y-3 text-sm font-semibold mt-auto">
                   <li className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-gradient-to-r from-green-500 to-teal-500"></div>
-                    <span>Pattern design</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-gradient-to-r from-green-500 to-teal-500"></div>
-                    <span>Production support</span>
+                    <span>Global brand support</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-gradient-to-r from-green-500 to-teal-500"></div>
