@@ -29,7 +29,16 @@ export default function Training() {
   };
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground relative">
+      <Link href="/">
+        <motion.button
+          className="fixed top-8 left-8 z-[60] bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-lg border border-border hover:shadow-xl transition-all hover:scale-110 flex items-center justify-center group"
+          whileHover={{ x: -4 }}
+          data-testid="button-back-home"
+        >
+          <ArrowLeft className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors" />
+        </motion.button>
+      </Link>
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/98 backdrop-blur-lg border-b border-border/50 shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-28 flex flex-col items-center justify-center text-center">
