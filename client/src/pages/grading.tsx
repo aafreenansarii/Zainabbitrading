@@ -147,9 +147,15 @@ export default function Grading() {
           <p className="text-lg text-white/90 mb-8">
             Send us your patterns and let's create production-ready graded sizes.
           </p>
-          <a href="/#contact-form" data-testid="button-grading-contact" className="inline-block bg-white text-orange-600 px-10 py-4 rounded-lg font-bold text-lg hover:bg-white/90 transition shadow-lg hover:shadow-xl">
-            Inquire Now
-          </a>
+          <Link href="/#contact-form">
+            <motion.button 
+              data-testid="button-grading-contact" 
+              className="inline-block bg-white text-orange-600 px-10 py-4 rounded-lg font-bold text-lg hover:bg-white/90 transition shadow-lg hover:shadow-xl"
+              whileHover={{ scale: 1.05 }}
+            >
+              Inquire Now
+            </motion.button>
+          </Link>
         </div>
       </motion.section>
 
