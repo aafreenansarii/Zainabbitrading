@@ -108,7 +108,7 @@ export default function Grading() {
               {
                 title: "Pattern Grading",
                 desc: "Professional size grading for all garment types maintaining proportional fit across sizes",
-                features: ["All size ranges", "Manual & CAD", "Consistent proportions"],
+                features: ["Base size pattern grading", "Pattern Maker making", "Fabric consumption"],
               },
               {
                 title: "Pattern Marking",
@@ -116,14 +116,9 @@ export default function Grading() {
                 features: ["Production-ready", "Clear markings", "Technical specs"],
               },
               {
-                title: "Scaling Services",
-                desc: "Accurate pattern scaling for customization and bulk production requirements",
-                features: ["Precise scaling", "Custom sizes", "Quality assured"],
-              },
-              {
                 title: "Digital Conversion",
                 desc: "Convert manual patterns to digital formats ready for production and CMT",
-                features: ["CAD digitization", "Production files", "Technical accuracy"],
+                features: ["CAD digitization", "Digital grading and marker making for softcopy", "Pattern digitizer"],
               },
             ].map((item, idx) => (
               <motion.div
