@@ -147,7 +147,7 @@ export default function Grading() {
           <p className="text-lg text-white/90 mb-8">
             Send us your patterns and let's create production-ready graded sizes.
           </p>
-          <Link href="/#contact-form">
+          <Link href="/?scrollTo=contact-form">
             <motion.button 
               data-testid="button-grading-contact" 
               className="inline-block bg-white text-orange-600 px-10 py-4 rounded-lg font-bold text-lg hover:bg-white/90 transition shadow-lg hover:shadow-xl"

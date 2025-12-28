@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "wouter";
 import { motion } from "framer-motion";
 import { BookOpen, Grid3x3, Briefcase, Phone, Mail, MapPin, ArrowRight, Star, ArrowUp } from "lucide-react";
 import { Link } from "wouter";
@@ -10,16 +11,22 @@ import logo from "@assets/only_ZBT_1766448125486.jpeg";
 import heroImage from "@assets/hero_1766450847632.png";
 
 export default function Home() {
+  const [location] = useLocation();
   const [hoveredService, setHoveredService] = useState<string | null>(null);
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 300);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    const params = new URLSearchParams(window.location.search);
+    const scrollTo = params.get("scrollTo");
+    if (scrollTo) {
+      setTimeout(() => {
+        const element = document.getElementById(scrollTo);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    }
+  }, [location]);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });

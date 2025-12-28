@@ -179,7 +179,7 @@ export default function Freelancing() {
           <p className="text-lg text-white/90 mb-8">
             Let's discuss your project requirements and find the perfect freelance solution.
           </p>
-          <Link href="/#contact-form">
+          <Link href="/?scrollTo=contact-form">
             <motion.button 
               data-testid="button-freelance-contact" 
               className="inline-block bg-white text-green-600 px-10 py-4 rounded-lg font-bold text-lg hover:bg-white/90 transition shadow-lg hover:shadow-xl"

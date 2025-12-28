@@ -142,7 +142,7 @@ export default function Training() {
           <p className="text-lg text-white/90 mb-8">
             Contact us to discuss your learning goals and schedule your sessions.
           </p>
-          <Link href="/#contact-form">
+          <Link href="/?scrollTo=contact-form">
             <motion.button 
               data-testid="button-training-contact" 
               className="inline-block bg-white text-blue-600 px-10 py-4 rounded-lg font-bold text-lg hover:bg-white/90 transition shadow-lg hover:shadow-xl"
