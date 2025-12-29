@@ -70,7 +70,7 @@ export default function Home() {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: showNav ? 0 : -100, opacity: showNav ? 1 : 0 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
-        className="fixed top-6 left-1/2 -translate-x-1/2 z-[100] bg-white/80 backdrop-blur-md border border-border px-8 py-4 rounded-full shadow-2xl"
+        className="fixed top-6 right-6 z-[100] bg-white/80 backdrop-blur-md border border-border px-8 py-4 rounded-full shadow-2xl"
       >
         <ul className="flex items-center gap-10">
           {navLinks.map((link) => (
