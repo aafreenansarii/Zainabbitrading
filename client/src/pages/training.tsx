@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
-import { ArrowLeft, Star, Users, Clock, Award, ArrowUp } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowLeft, Star, Users, Clock, Award, ArrowUp, ChevronDown } from "lucide-react";
 import { Link } from "wouter";
 import { useState, useEffect } from "react";
 import trainingImage from "@assets/stock_images/professional_woman_t_dad03893.jpg";
@@ -8,6 +8,7 @@ import logo from "@assets/only_ZBT_1766448125486.jpeg";
 
 export default function Training() {
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [expandedIdx, setExpandedIdx] = useState<number | null>(null);
   
   useEffect(() => {
     const handleScroll = () => {
@@ -27,6 +28,24 @@ export default function Training() {
     transition: { duration: 0.6 },
     viewport: { once: true },
   };
+
+  const services = [
+    {
+      title: "Manual Pattern Making",
+      desc: "Traditional hand-drafted patterns for all garment types - menswear, womenswear, and kidswear",
+      skills: ["Basic to advanced techniques", "Measurements & grading", "Garment construction", "Interview training"],
+    },
+    {
+      title: "CAD Software",
+      desc: "Professional digital pattern design used by global fashion brands and factories",
+      skills: ["On screen pattern making", "Software like Richpeace, Tuka, Gemini, Winda etc.", "Digital grading", "Production-ready files"],
+    },
+    {
+      title: "Professional Skills",
+      desc: "Industry-standard practices and workflow",
+      skills: ["Scaling & marking", "Client communication", "Professional standards"],
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-background text-foreground relative">
@@ -71,13 +90,13 @@ export default function Training() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="flex items-center justify-center">
             <motion.div {...fadeInUp}>
-              <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6 text-white">
+              <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6 text-white text-center">
                 Professional Pattern Making <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Training</span>
               </h1>
-              <p className="text-lg text-gray-200 mb-8 leading-relaxed font-medium">
+              <p className="text-lg text-gray-200 mb-8 leading-relaxed font-medium text-center max-w-3xl mx-auto">
                 Master the art of pattern making with 22 years of industry expertise. Learn both manual techniques and Richpeace CAD software from a professional pattern maker working with global brands.
               </p>
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col sm:flex-row justify-center gap-6">
                 <div className="flex items-center gap-3">
                   <Users className="w-6 h-6 text-white" />
                   <span className="font-semibold text-white">One-on-One Sessions</span>
@@ -101,43 +120,55 @@ export default function Training() {
         <div className="max-w-7xl mx-auto">
           <motion.div className="text-center mb-16" {...fadeInUp}>
             <h2 className="font-serif text-4xl font-bold mb-4">What You'll Learn</h2>
+            <p className="text-muted-foreground">Click on a category to explore details</p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {[
-              {
-                title: "Manual Pattern Making",
-                desc: "Traditional hand-drafted patterns for all garment types - menswear, womenswear, and kidswear",
-                skills: ["Basic to advanced techniques", "Measurements & grading", "Garment construction", "Interview training"],
-              },
-              {
-                title: "CAD Software",
-                desc: "Professional digital pattern design used by global fashion brands and factories",
-                skills: ["On screen pattern making", "Software like Richpeace, Tuka, Gemini, Winda etc.", "Digital grading", "Production-ready files"],
-              },
-              {
-                title: "Professional Skills",
-                desc: "Industry-standard practices and workflow",
-                skills: ["Scaling & marking", "Client communication", "Professional standards"],
-              },
-            ].map((item, idx) => (
+          <div className="max-w-4xl mx-auto space-y-4">
+            {services.map((item, idx) => (
               <motion.div
                 key={idx}
-                className="bg-white rounded-xl border border-border p-8 hover:border-primary/50 hover:shadow-lg transition-all"
-                whileHover={{ y: -4 }}
+                className="bg-white rounded-xl border border-border overflow-hidden hover:border-primary/50 transition-all shadow-sm hover:shadow-md"
                 {...fadeInUp}
-                data-testid={`card-training-${idx}`}
               >
-                <h3 className="text-2xl font-bold mb-3">{item.title}</h3>
-                <p className="text-muted-foreground mb-4">{item.desc}</p>
-                <ul className="space-y-2">
-                  {item.skills.map((skill, i) => (
-                    <li key={i} className="flex items-center gap-2 text-sm">
-                      <Star className="w-4 h-4 text-primary" />
-                      {skill}
-                    </li>
-                  ))}
-                </ul>
+                <button
+                  onClick={() => setExpandedIdx(expandedIdx === idx ? null : idx)}
+                  className="w-full flex items-center justify-between p-6 text-left"
+                >
+                  <div>
+                    <h3 className="text-2xl font-bold text-foreground">{item.title}</h3>
+                    <p className="text-muted-foreground mt-1">{item.desc}</p>
+                  </div>
+                  <motion.div
+                    animate={{ rotate: expandedIdx === idx ? 180 : 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <ChevronDown className="w-6 h-6 text-primary" />
+                  </motion.div>
+                </button>
+                <AnimatePresence>
+                  {expandedIdx === idx && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="overflow-hidden"
+                    >
+                      <div className="px-6 pb-6 border-t border-border bg-gray-50/50">
+                        <ul className="grid sm:grid-cols-2 gap-4 mt-4">
+                          {item.skills.map((skill, i) => (
+                            <li key={i} className="flex items-center gap-3 text-sm font-medium">
+                              <div className="bg-primary/10 p-1 rounded-full">
+                                <Star className="w-4 h-4 text-primary" />
+                              </div>
+                              {skill}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </motion.div>
             ))}
           </div>
@@ -163,7 +194,7 @@ export default function Training() {
         </div>
       </motion.section>
 
-      {/* Placeholder for photos section */}
+      {/* Photos Section */}
       <motion.section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="font-serif text-4xl font-bold mb-6">Training Gallery</h2>
@@ -200,7 +231,6 @@ export default function Training() {
       <footer className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-12 mb-12">
-            {/* Brand Section */}
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <img src={logo} alt="Zainab Bi Trading" className="w-12 h-12 object-contain" />
@@ -211,8 +241,6 @@ export default function Training() {
               </div>
               <p className="text-gray-400 text-sm">22 years of excellence in pattern making, training, and freelancing services.</p>
             </div>
-
-            {/* Quick Links */}
             <div>
               <h4 className="font-bold text-lg mb-4">Quick Links</h4>
               <ul className="space-y-2">
@@ -221,8 +249,6 @@ export default function Training() {
                 <li><a href="https://maps.google.com/?q=Shop+No.+06,+Kanakia+Rd,+opp.+Fitness+pro,+Unique+Gardens,+Beverly+Park,+Mira+Road+East,+Mumbai,+Mira+Bhayandar,+Maharashtra+401107,+India" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">Store Location</a></li>
               </ul>
             </div>
-
-            {/* Our Services */}
             <div>
               <h4 className="font-bold text-lg mb-4">Our Services</h4>
               <ul className="space-y-2">
@@ -231,8 +257,6 @@ export default function Training() {
                 <li><Link href="/freelancing" className="text-gray-400 hover:text-white transition">Freelance Services</Link></li>
               </ul>
             </div>
-
-            {/* Contact Info */}
             <div>
               <h4 className="font-bold text-lg mb-4">Get In Touch</h4>
               <ul className="space-y-2 text-gray-400 text-sm">
@@ -242,11 +266,8 @@ export default function Training() {
               </ul>
             </div>
           </div>
-
-          <div className="border-t border-white/10 pt-10">
-            <p className="text-center text-gray-400 text-sm">
-              © 2024 Zainab Bi Trading. All rights reserved.
-            </p>
+          <div className="border-t border-white/10 pt-10 text-center">
+            <p className="text-gray-400 text-sm">© 2024 Zainab Bi Trading. All rights reserved.</p>
           </div>
         </div>
       </footer>

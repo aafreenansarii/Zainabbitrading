@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
-import { ArrowLeft, Star, Zap, Clock, CheckCircle, ArrowUp } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowLeft, Star, Zap, Clock, CheckCircle, ArrowUp, ChevronDown } from "lucide-react";
 import { Link } from "wouter";
 import { useState, useEffect } from "react";
 import gradingImage from "@assets/stock_images/professional_woman_w_62468fac.jpg";
@@ -8,6 +8,7 @@ import logo from "@assets/only_ZBT_1766448125486.jpeg";
 
 export default function Grading() {
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [expandedIdx, setExpandedIdx] = useState<number | null>(null);
   
   useEffect(() => {
     const handleScroll = () => {
@@ -27,6 +28,24 @@ export default function Grading() {
     transition: { duration: 0.6 },
     viewport: { once: true },
   };
+
+  const services = [
+    {
+      title: "Pattern Grading",
+      desc: "Professional size grading for all garment types maintaining proportional fit across sizes",
+      features: ["Base size pattern grading", "Pattern Maker making", "Fabric consumption"],
+    },
+    {
+      title: "Pattern Marking",
+      desc: "Precise marking for production with detailed seam allowances and construction notes",
+      features: ["Production-ready", "Clear markings", "Technical specs"],
+    },
+    {
+      title: "Digital Conversion",
+      desc: "Convert manual patterns to digital formats ready for production and CMT",
+      features: ["CAD digitization", "Digital grading and marker making for softcopy", "Pattern digitizer"],
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-background text-foreground relative">
@@ -71,13 +90,13 @@ export default function Grading() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="flex items-center justify-center">
             <motion.div {...fadeInUp}>
-              <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6 text-white">
+              <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6 text-white text-center">
                 Professional Grading & <span className="bg-gradient-to-r from-orange-400 via-pink-400 to-red-400 bg-clip-text text-transparent">Marking Services</span>
               </h1>
-              <p className="text-lg text-gray-200 mb-8 leading-relaxed font-medium">
+              <p className="text-lg text-gray-200 mb-8 leading-relaxed font-medium text-center max-w-3xl mx-auto">
                 Expert pattern grading and marking tailored to your exact specifications. With 22 years of experience, we deliver precise, production-ready patterns for factories, brands, and designers worldwide.
               </p>
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col sm:flex-row justify-center gap-6">
                 <div className="flex items-center gap-3">
                   <Zap className="w-6 h-6 text-white" />
                   <span className="font-semibold text-white">Quick Turnaround</span>
@@ -101,43 +120,55 @@ export default function Grading() {
         <div className="max-w-7xl mx-auto">
           <motion.div className="text-center mb-16" {...fadeInUp}>
             <h2 className="font-serif text-4xl font-bold mb-4">Our Services</h2>
+            <p className="text-muted-foreground">Click on a service to see specialized features</p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {[
-              {
-                title: "Pattern Grading",
-                desc: "Professional size grading for all garment types maintaining proportional fit across sizes",
-                features: ["Base size pattern grading", "Pattern Maker making", "Fabric consumption"],
-              },
-              {
-                title: "Pattern Marking",
-                desc: "Precise marking for production with detailed seam allowances and construction notes",
-                features: ["Production-ready", "Clear markings", "Technical specs"],
-              },
-              {
-                title: "Digital Conversion",
-                desc: "Convert manual patterns to digital formats ready for production and CMT",
-                features: ["CAD digitization", "Digital grading and marker making for softcopy", "Pattern digitizer"],
-              },
-            ].map((item, idx) => (
+          <div className="max-w-4xl mx-auto space-y-4">
+            {services.map((item, idx) => (
               <motion.div
                 key={idx}
-                className="bg-white rounded-xl border border-border p-8 hover:border-accent/50 hover:shadow-lg transition-all"
-                whileHover={{ y: -4 }}
+                className="bg-white rounded-xl border border-border overflow-hidden hover:border-orange-500/50 transition-all shadow-sm hover:shadow-md"
                 {...fadeInUp}
-                data-testid={`card-grading-${idx}`}
               >
-                <h3 className="text-2xl font-bold mb-3">{item.title}</h3>
-                <p className="text-muted-foreground mb-4">{item.desc}</p>
-                <ul className="space-y-2">
-                  {item.features.map((feature, i) => (
-                    <li key={i} className="flex items-center gap-2 text-sm">
-                      <Star className="w-4 h-4 text-accent" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+                <button
+                  onClick={() => setExpandedIdx(expandedIdx === idx ? null : idx)}
+                  className="w-full flex items-center justify-between p-6 text-left"
+                >
+                  <div>
+                    <h3 className="text-2xl font-bold text-foreground">{item.title}</h3>
+                    <p className="text-muted-foreground mt-1">{item.desc}</p>
+                  </div>
+                  <motion.div
+                    animate={{ rotate: expandedIdx === idx ? 180 : 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <ChevronDown className="w-6 h-6 text-orange-600" />
+                  </motion.div>
+                </button>
+                <AnimatePresence>
+                  {expandedIdx === idx && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="overflow-hidden"
+                    >
+                      <div className="px-6 pb-6 border-t border-border bg-orange-50/30">
+                        <ul className="grid sm:grid-cols-2 gap-4 mt-4">
+                          {item.features.map((feature, i) => (
+                            <li key={i} className="flex items-center gap-3 text-sm font-medium">
+                              <div className="bg-orange-100 p-1 rounded-full">
+                                <Star className="w-4 h-4 text-orange-600" />
+                              </div>
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </motion.div>
             ))}
           </div>
@@ -163,7 +194,7 @@ export default function Grading() {
         </div>
       </motion.section>
 
-      {/* Placeholder for work samples */}
+      {/* Photos Section */}
       <motion.section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="font-serif text-4xl font-bold mb-6">Work Samples</h2>
@@ -173,7 +204,6 @@ export default function Grading() {
               <div
                 key={item}
                 className="bg-white rounded-xl aspect-square border-2 border-dashed border-border flex items-center justify-center"
-                data-testid={`sample-placeholder-${item}`}
               >
                 <p className="text-muted-foreground">Sample {item}</p>
               </div>
@@ -190,7 +220,6 @@ export default function Grading() {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0 }}
-          data-testid="button-scroll-to-top"
         >
           <ArrowUp className="w-6 h-6" />
         </motion.button>
@@ -200,7 +229,6 @@ export default function Grading() {
       <footer className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-12 mb-12">
-            {/* Brand Section */}
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <img src={logo} alt="Zainab Bi Trading" className="w-12 h-12 object-contain" />
@@ -211,8 +239,6 @@ export default function Grading() {
               </div>
               <p className="text-gray-400 text-sm">22 years of excellence in pattern making, training, and freelancing services.</p>
             </div>
-
-            {/* Quick Links */}
             <div>
               <h4 className="font-bold text-lg mb-4">Quick Links</h4>
               <ul className="space-y-2">
@@ -221,8 +247,6 @@ export default function Grading() {
                 <li><a href="https://maps.google.com/?q=Shop+No.+06,+Kanakia+Rd,+opp.+Fitness+pro,+Unique+Gardens,+Beverly+Park,+Mira+Road+East,+Mumbai,+Mira+Bhayandar,+Maharashtra+401107,+India" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">Store Location</a></li>
               </ul>
             </div>
-
-            {/* Our Services */}
             <div>
               <h4 className="font-bold text-lg mb-4">Our Services</h4>
               <ul className="space-y-2">
@@ -231,8 +255,6 @@ export default function Grading() {
                 <li><Link href="/freelancing" className="text-gray-400 hover:text-white transition">Freelance Services</Link></li>
               </ul>
             </div>
-
-            {/* Contact Info */}
             <div>
               <h4 className="font-bold text-lg mb-4">Get In Touch</h4>
               <ul className="space-y-2 text-gray-400 text-sm">
@@ -242,11 +264,8 @@ export default function Grading() {
               </ul>
             </div>
           </div>
-
-          <div className="border-t border-white/10 pt-10">
-            <p className="text-center text-gray-400 text-sm">
-              © 2024 Zainab Bi Trading. All rights reserved.
-            </p>
+          <div className="border-t border-white/10 pt-10 text-center">
+            <p className="text-gray-400 text-sm">© 2024 Zainab Bi Trading. All rights reserved.</p>
           </div>
         </div>
       </footer>
