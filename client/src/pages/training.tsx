@@ -91,28 +91,28 @@ export default function Training() {
           backgroundAttachment: 'fixed'
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60"></div>
+        <div className="absolute inset-0 bg-white/70 backdrop-blur-[2px]"></div>
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="flex items-center justify-center">
             <motion.div {...fadeInUp}>
-              <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6 text-white text-center">
-                Professional Pattern Making <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Training</span>
+              <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6 text-black text-center">
+                Professional Pattern Making <span className="text-blue-600">Training</span>
               </h1>
-              <p className="text-lg text-gray-200 mb-8 leading-relaxed font-medium text-center max-w-3xl mx-auto">
+              <p className="text-lg text-gray-800 mb-8 leading-relaxed font-medium text-center max-w-3xl mx-auto">
                 Master the art of pattern making with 22 years of industry expertise. Learn both manual techniques and Richpeace CAD software from a professional pattern maker working with global brands.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-6">
                 <div className="flex items-center gap-3">
-                  <Users className="w-6 h-6 text-white" />
-                  <span className="font-semibold text-white">One-on-One Sessions</span>
+                  <Users className="w-6 h-6 text-blue-600" />
+                  <span className="font-semibold text-gray-900">One-on-One Sessions</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Clock className="w-6 h-6 text-white" />
-                  <span className="font-semibold text-white">Flexible Schedule</span>
+                  <Clock className="w-6 h-6 text-blue-600" />
+                  <span className="font-semibold text-gray-900">Flexible Schedule</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Award className="w-6 h-6 text-white" />
-                  <span className="font-semibold text-white">Hands-On Learning</span>
+                  <Award className="w-6 h-6 text-blue-600" />
+                  <span className="font-semibold text-gray-900">Hands-On Learning</span>
                 </div>
               </div>
             </motion.div>

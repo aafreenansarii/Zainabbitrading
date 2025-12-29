@@ -119,15 +119,15 @@ export default function Home() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60"></div>
+        <div className="absolute inset-0 bg-white/70 backdrop-blur-[2px]"></div>
         
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="flex items-center justify-center">
             <motion.div {...fadeInUp}>
-              <h1 className="font-serif text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                Master <span className="text-blue-400">Pattern Making</span>
+              <h1 className="font-serif text-5xl md:text-6xl font-bold mb-8 leading-tight text-black text-center">
+                Master <span className="text-blue-600">Pattern Making</span>
               </h1>
-              <p className="text-lg text-gray-200 mb-10 leading-relaxed font-medium">
+              <p className="text-lg text-gray-800 mb-10 leading-relaxed font-medium text-center max-w-3xl mx-auto">
                 Learn both manual & CAD techniques from a 22-year industry expert. Transform your skills with hands-on training in Mira Road.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">

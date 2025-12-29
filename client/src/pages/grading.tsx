@@ -91,28 +91,28 @@ export default function Grading() {
           backgroundAttachment: 'fixed'
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60"></div>
+        <div className="absolute inset-0 bg-white/70 backdrop-blur-[2px]"></div>
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="flex items-center justify-center">
             <motion.div {...fadeInUp}>
-              <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6 text-white text-center">
-                Professional Grading & <span className="bg-gradient-to-r from-orange-400 via-pink-400 to-red-400 bg-clip-text text-transparent">Marking Services</span>
+              <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6 text-black text-center">
+                Professional Grading & <span className="text-orange-600">Marking Services</span>
               </h1>
-              <p className="text-lg text-gray-200 mb-8 leading-relaxed font-medium text-center max-w-3xl mx-auto">
+              <p className="text-lg text-gray-800 mb-8 leading-relaxed font-medium text-center max-w-3xl mx-auto">
                 Expert pattern grading and marking tailored to your exact specifications. With 22 years of experience, we deliver precise, production-ready patterns for factories, brands, and designers worldwide.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-6">
                 <div className="flex items-center gap-3">
-                  <Zap className="w-6 h-6 text-white" />
-                  <span className="font-semibold text-white">Quick Turnaround</span>
+                  <Zap className="w-6 h-6 text-orange-600" />
+                  <span className="font-semibold text-gray-900">Quick Turnaround</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Clock className="w-6 h-6 text-white" />
-                  <span className="font-semibold text-white">Fast Delivery</span>
+                  <Clock className="w-6 h-6 text-orange-600" />
+                  <span className="font-semibold text-gray-900">Fast Delivery</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="w-6 h-6 text-white" />
-                  <span className="font-semibold text-white">100% Precision</span>
+                  <CheckCircle className="w-6 h-6 text-orange-600" />
+                  <span className="font-semibold text-gray-900">100% Precision</span>
                 </div>
               </div>
             </motion.div>

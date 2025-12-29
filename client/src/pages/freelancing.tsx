@@ -106,28 +106,28 @@ export default function Freelancing() {
           backgroundAttachment: 'fixed'
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60"></div>
+        <div className="absolute inset-0 bg-white/70 backdrop-blur-[2px]"></div>
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="flex items-center justify-center">
             <motion.div {...fadeInUp}>
-              <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6 text-white text-center">
-                Expert <span className="bg-gradient-to-r from-green-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">Freelance Services</span>
+              <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6 text-black text-center">
+                Expert <span className="text-green-600">Freelance Services</span>
               </h1>
-              <p className="text-lg text-gray-200 mb-8 leading-relaxed font-medium text-center max-w-3xl mx-auto">
+              <p className="text-lg text-gray-800 mb-8 leading-relaxed font-medium text-center max-w-3xl mx-auto">
                 Professional pattern making and design support for brands, factories, startups, and individual clients worldwide. Flexible engagement tailored to your specific needs and timeline.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-6">
                 <div className="flex items-center gap-3">
-                  <Briefcase className="w-6 h-6 text-white" />
-                  <span className="font-semibold text-white">Flexible Engagement</span>
+                  <Briefcase className="w-6 h-6 text-green-600" />
+                  <span className="font-semibold text-gray-900">Flexible Engagement</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Zap className="w-6 h-6 text-white" />
-                  <span className="font-semibold text-white">Quick Turnaround</span>
+                  <Zap className="w-6 h-6 text-green-600" />
+                  <span className="font-semibold text-gray-900">Quick Turnaround</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Users className="w-6 h-6 text-white" />
-                  <span className="font-semibold text-white">Global Clients</span>
+                  <Users className="w-6 h-6 text-green-600" />
+                  <span className="font-semibold text-gray-900">Global Clients</span>
                 </div>
               </div>
             </motion.div>
