@@ -6,7 +6,7 @@ export default function ContactForm() {
     name: "",
     phone: "",
     email: "",
-    service: "pattern-making",
+    service: "",
     message: "",
   });
 
@@ -18,22 +18,6 @@ export default function ContactForm() {
       ...prev,
       [name]: value,
     }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form submitted to ansariaafreend@gmail.com:", formData);
-    setSubmitted(true);
-    setTimeout(() => {
-      setFormData({
-        name: "",
-        phone: "",
-        email: "",
-        service: "pattern-making",
-        message: "",
-      });
-      setSubmitted(false);
-    }, 3000);
   };
 
   return (
@@ -57,7 +41,11 @@ export default function ContactForm() {
           </motion.div>
         )}
 
-        <form onSubmit={handleSubmit} className="space-y-5">
+        <form
+          action="https://formspree.io/f/mvzobprg"
+          method="POST"
+          className="space-y-5"
+        >
           <div className="grid md:grid-cols-2 gap-5">
             <div>
               <label className="block text-sm font-semibold mb-2 text-foreground">
@@ -116,13 +104,15 @@ export default function ContactForm() {
               name="service"
               value={formData.service}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 transition bg-white"
+              className={`w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 transition bg-white ${!formData.service ? 'text-gray-400' : 'text-foreground'}`}
+              required
             >
-              <option value="pattern-making">Pattern Making Training</option>
-              <option value="grading">Grading & Marking Services</option>
-              <option value="freelancing">Freelancing Services</option>
-              <option value="consultation">Consultation</option>
-              <option value="other">Other</option>
+              <option value="" disabled hidden>Select one</option>
+              <option value="pattern-making" className="text-foreground">Pattern Making Training</option>
+              <option value="grading" className="text-foreground">Grading & Marking Services</option>
+              <option value="freelancing" className="text-foreground">Freelancing Services</option>
+              <option value="consultation" className="text-foreground">Consultation</option>
+              <option value="other" className="text-foreground">Other</option>
             </select>
           </div>
 

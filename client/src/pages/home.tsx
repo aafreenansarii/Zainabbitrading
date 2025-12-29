@@ -114,7 +114,7 @@ export default function Home() {
           <motion.div className="text-center mb-20" {...fadeInUp}>
             <h2 className="font-serif text-6xl md:text-7xl font-bold mb-6">Our Services</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto font-medium">
-              Comprehensive solutions for pattern makers, fashion designers, and businesses
+              Comprehensive solutions for Pattern Makers, Fashion Designers, and Businesses
             </p>
           </motion.div>
 
@@ -235,7 +235,7 @@ export default function Home() {
             <motion.div {...fadeInUp}>
               <h2 className="font-serif text-6xl md:text-7xl font-bold mb-8 leading-tight">About <span className="bg-gradient-to-r from-red-500 via-pink-500 to-yellow-500 bg-clip-text text-transparent">A.M Ansari</span></h2>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed font-medium">
-                I am a professional pattern maker with 22 years of industry experience, working with designers, brands, factories, startups, and individual clients worldwide. I create manual and CAD patterns for menswear, womenswear, and kidswear, including western, formal, and casual garments, along with grading, scaling, and marking.
+                I am a professional Pattern Maker with 22 years of industry experience, working with designers, brands, factories, startups, and individual clients worldwide. I create manual and CAD patterns for menswear, womenswear, and kidswear, including western, formal, and casual garments, along with grading, scaling, and marking.
               </p>
               <p className="text-lg text-gray-700 mb-8 leading-relaxed font-medium">
                 I also offer in-person, one-on-one training in pattern making for beginners and advanced learners, using manual methods and Richpeace CAD software. If you are looking for professional pattern making support or want to learn pattern making with clear, practical guidance, feel free to reach out to discuss your requirements.
