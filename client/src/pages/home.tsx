@@ -28,6 +28,17 @@ export default function Home() {
     }
   }, [location]);
 
+  const [showNav, setShowNav] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 300);
+      setShowNav(window.scrollY > 100);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -39,6 +50,12 @@ export default function Home() {
     viewport: { once: true },
   };
 
+  const navLinks = [
+    { name: "Services", href: "#services" },
+    { name: "About", href: "#about" },
+    { name: "Contact", href: "#contact-form" },
+  ];
+
   const staggerContainer = {
     initial: { opacity: 0 },
     whileInView: { opacity: 1 },
@@ -47,7 +64,32 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground selection:bg-primary/10">
+      {/* Floating Navigation */}
+      <motion.nav
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: showNav ? 0 : -100, opacity: showNav ? 1 : 0 }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
+        className="fixed top-6 left-1/2 -translate-x-1/2 z-[100] bg-white/80 backdrop-blur-md border border-border px-8 py-4 rounded-full shadow-2xl"
+      >
+        <ul className="flex items-center gap-10">
+          {navLinks.map((link) => (
+            <li key={link.name}>
+              <a
+                href={link.href}
+                className="text-xs font-black text-foreground hover:text-primary transition-all uppercase tracking-[0.2em] hover:scale-110 inline-block"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById(link.href.replace('#', ''))?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                {link.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </motion.nav>
+
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/98 backdrop-blur-lg border-b border-border/50 shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-28 flex flex-col items-center justify-center text-center">

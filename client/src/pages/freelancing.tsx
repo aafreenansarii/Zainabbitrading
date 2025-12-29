@@ -75,8 +75,8 @@ export default function Freelancing() {
       </Link>
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/98 backdrop-blur-lg border-b border-border/50 shadow-lg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-28 flex flex-col items-center justify-center text-center">
-          <Link href="/" className="flex flex-col items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-28 flex items-center justify-between">
+          <Link href="/" className="flex flex-col items-center flex-1">
             <div className="flex items-center gap-4 mb-1">
               <img src={logo} alt="Zainab Bi Trading" className="w-14 h-14 object-contain shadow-sm rounded-full" />
               <span className="font-serif text-3xl font-extrabold tracking-tight bg-gradient-to-r from-red-600 via-pink-600 to-orange-600 bg-clip-text text-transparent drop-shadow-sm">
@@ -88,6 +88,11 @@ export default function Freelancing() {
               Manual & CAD Pattern Maker | Trainer | Freelancer
             </span>
           </Link>
+          <div className="hidden md:flex items-center gap-8 pr-4">
+            <Link href="/#services" className="text-sm font-bold text-foreground hover:text-green-600 transition-colors uppercase tracking-wider">Services</Link>
+            <Link href="/#about" className="text-sm font-bold text-foreground hover:text-green-600 transition-colors uppercase tracking-wider">About</Link>
+            <Link href="/?scrollTo=contact-form" className="text-sm font-bold text-foreground hover:text-green-600 transition-colors uppercase tracking-wider">Contact</Link>
+          </div>
         </div>
       </nav>
 
