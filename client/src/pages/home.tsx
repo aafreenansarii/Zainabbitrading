@@ -124,10 +124,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="flex items-center justify-center">
             <motion.div {...fadeInUp}>
-              <h1 className="font-serif text-6xl md:text-7xl font-bold mb-8 leading-tight text-white">
-                Master <span className="bg-gradient-to-r from-red-400 via-pink-400 to-yellow-400 bg-clip-text text-transparent">Pattern Making</span>
+              <h1 className="font-serif text-5xl md:text-6xl font-bold mb-8 leading-tight text-white">
+                Master <span className="text-blue-400">Pattern Making</span>
               </h1>
-              <p className="text-xl text-gray-200 mb-10 leading-relaxed font-medium">
+              <p className="text-lg text-gray-200 mb-10 leading-relaxed font-medium">
                 Learn both manual & CAD techniques from a 22-year industry expert. Transform your skills with hands-on training in Mira Road.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -154,8 +154,8 @@ export default function Home() {
       >
         <div className="max-w-7xl mx-auto">
           <motion.div className="text-center mb-20" {...fadeInUp}>
-            <h2 className="font-serif text-6xl md:text-7xl font-bold mb-6">Our Services</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto font-medium">
+            <h2 className="font-serif text-5xl md:text-6xl font-bold mb-6 text-gray-900">Our Services</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto font-medium">
               Comprehensive solutions for Pattern Makers, Fashion Designers, and Businesses
             </p>
           </motion.div>
@@ -275,7 +275,7 @@ export default function Home() {
               />
             </motion.div>
             <motion.div {...fadeInUp}>
-              <h2 className="font-serif text-6xl md:text-7xl font-bold mb-8 leading-tight">About <span className="bg-gradient-to-r from-red-500 via-pink-500 to-yellow-500 bg-clip-text text-transparent">A.M Ansari</span></h2>
+              <h2 className="font-serif text-5xl md:text-6xl font-bold mb-8 leading-tight text-gray-900">About <span className="text-blue-600">A.M Ansari</span></h2>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed font-medium">
                 I am a professional Pattern Maker with 22 years of industry experience, working with designers, brands, factories, startups, and individual clients worldwide. I create manual and CAD patterns for menswear, womenswear, and kidswear, including western, formal, and casual garments, along with grading, scaling, and marking.
               </p>
@@ -317,12 +317,12 @@ export default function Home() {
       </motion.section>
 
       {/* CTA Section */}
-      <motion.section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-500 via-pink-500 to-yellow-500" {...fadeInUp}>
+      <motion.section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-indigo-700" {...fadeInUp}>
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-serif text-6xl md:text-7xl font-bold text-white mb-8">
+          <h2 className="font-serif text-5xl md:text-6xl font-bold text-white mb-8">
             Ready to Transform?
           </h2>
-          <p className="text-xl text-white/95 mb-10 font-medium">
+          <p className="text-lg text-white/95 mb-10 font-medium">
             Join our training programs or hire us for your freelance needs. Let's create something amazing together.
           </p>
           <a href="#contact-form">
@@ -348,8 +348,8 @@ export default function Home() {
       <motion.section id="contact" className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-100" {...staggerContainer}>
         <div className="max-w-7xl mx-auto">
           <motion.div className="text-center mb-20" {...fadeInUp}>
-            <h2 className="font-serif text-6xl md:text-7xl font-bold mb-6">Get In Touch</h2>
-            <p className="text-xl text-gray-600 font-medium">We'd love to hear from you</p>
+            <h2 className="font-serif text-5xl md:text-6xl font-bold mb-6 text-gray-900">Get In Touch</h2>
+            <p className="text-lg text-gray-600 font-medium">We'd love to hear from you</p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
