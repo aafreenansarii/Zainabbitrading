@@ -263,25 +263,84 @@ export default function Home() {
         </div>
       </motion.section>
 
-      {/* Achievements Section */}
-      <motion.section className="py-20 px-4 sm:px-6 lg:px-8 bg-white" {...fadeInUp}>
+      {/* About Section */}
+      <motion.section id="about" className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white" {...staggerContainer}>
         <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <motion.div {...fadeInUp}>
+              <img
+                src={professionalPhoto}
+                alt="A.M Ansari - Professional Pattern Maker"
+                className="rounded-3xl shadow-2xl w-full h-[500px] object-cover border-8 border-white object-top"
+              />
+            </motion.div>
+            <motion.div {...fadeInUp}>
+              <h2 className="font-serif text-5xl md:text-6xl font-bold mb-8 leading-tight text-gray-900">About <span className="text-blue-600">A.M Ansari</span></h2>
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed font-medium">
+                I am a professional Pattern Maker with 22 years of industry experience, working with designers, brands, factories, startups, and individual clients worldwide. I create manual and CAD patterns for menswear, womenswear, and kidswear, including western, formal, and casual garments, along with grading, scaling, and marking.
+              </p>
+              <p className="text-lg text-gray-700 mb-8 leading-relaxed font-medium">
+                I also offer in-person, one-on-one training in pattern making for beginners and advanced learners, using manual methods and Richpeace CAD software. If you are looking for professional pattern making support or want to learn pattern making with clear, practical guidance, feel free to reach out to discuss your requirements.
+              </p>
+              <div className="flex flex-col gap-4">
+                <div className="flex items-start gap-4">
+                  <div className="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-1">
+                    <Star className="w-4 h-4 text-accent" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-1 text-gray-900">22+ Years Experience</h4>
+                    <p className="text-muted-foreground text-sm">Working with global designers and brands</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-1">
+                    <Star className="w-4 h-4 text-accent" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-1 text-gray-900">Richpeace CAD Expertise</h4>
+                    <p className="text-muted-foreground text-sm">Professional CAD pattern creation</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-1">
+                    <Star className="w-4 h-4 text-accent" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-1 text-gray-900">One-on-One Training</h4>
+                    <p className="text-muted-foreground text-sm">Personalized learning for all levels</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Achievements Section */}
+      <motion.section className="py-24 px-4 sm:px-6 lg:px-8 bg-white" {...fadeInUp}>
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div className="mb-16" {...fadeInUp}>
+            <h2 className="font-serif text-5xl md:text-6xl font-bold mb-6 text-gray-900">Achievements</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto font-medium">
+              Over two decades of excellence in the pattern making industry.
+            </p>
+          </motion.div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center p-6 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-lg transition-all">
-              <div className="text-4xl font-bold text-blue-600 mb-2">22+</div>
-              <div className="text-sm font-black uppercase tracking-widest text-gray-500">Years Exp</div>
+            <div className="text-center p-8 rounded-3xl bg-gray-50 border border-gray-100 hover:shadow-xl transition-all hover:-translate-y-2">
+              <div className="text-5xl font-bold text-blue-600 mb-3">22+</div>
+              <div className="text-xs font-black uppercase tracking-[0.2em] text-gray-500">Years Exp</div>
             </div>
-            <div className="text-center p-6 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-lg transition-all">
-              <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
-              <div className="text-sm font-black uppercase tracking-widest text-gray-500">Students</div>
+            <div className="text-center p-8 rounded-3xl bg-gray-50 border border-gray-100 hover:shadow-xl transition-all hover:-translate-y-2">
+              <div className="text-5xl font-bold text-blue-600 mb-3">500+</div>
+              <div className="text-xs font-black uppercase tracking-[0.2em] text-gray-500">Students</div>
             </div>
-            <div className="text-center p-6 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-lg transition-all">
-              <div className="text-4xl font-bold text-blue-600 mb-2">50+</div>
-              <div className="text-sm font-black uppercase tracking-widest text-gray-500">Brands</div>
+            <div className="text-center p-8 rounded-3xl bg-gray-50 border border-gray-100 hover:shadow-xl transition-all hover:-translate-y-2">
+              <div className="text-5xl font-bold text-blue-600 mb-3">50+</div>
+              <div className="text-xs font-black uppercase tracking-[0.2em] text-gray-500">Brands</div>
             </div>
-            <div className="text-center p-6 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-lg transition-all">
-              <div className="text-4xl font-bold text-blue-600 mb-2">100%</div>
-              <div className="text-sm font-black uppercase tracking-widest text-gray-500">Practical</div>
+            <div className="text-center p-8 rounded-3xl bg-gray-50 border border-gray-100 hover:shadow-xl transition-all hover:-translate-y-2">
+              <div className="text-5xl font-bold text-blue-600 mb-3">100%</div>
+              <div className="text-xs font-black uppercase tracking-[0.2em] text-gray-500">Practical</div>
             </div>
           </div>
         </div>
@@ -336,59 +395,6 @@ export default function Home() {
                 </div>
               </motion.div>
             ))}
-          </div>
-        </div>
-      </motion.section>
-
-      {/* About Section */}
-      <motion.section id="about" className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white" {...staggerContainer}>
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <motion.div {...fadeInUp}>
-              <img
-                src={professionalPhoto}
-                alt="A.M Ansari - Professional Pattern Maker"
-                className="rounded-3xl shadow-2xl w-full h-[500px] object-cover border-8 border-white object-top"
-              />
-            </motion.div>
-            <motion.div {...fadeInUp}>
-              <h2 className="font-serif text-5xl md:text-6xl font-bold mb-8 leading-tight text-gray-900">About <span className="text-blue-600">A.M Ansari</span></h2>
-              <p className="text-lg text-gray-700 mb-6 leading-relaxed font-medium">
-                I am a professional Pattern Maker with 22 years of industry experience, working with designers, brands, factories, startups, and individual clients worldwide. I create manual and CAD patterns for menswear, womenswear, and kidswear, including western, formal, and casual garments, along with grading, scaling, and marking.
-              </p>
-              <p className="text-lg text-gray-700 mb-8 leading-relaxed font-medium">
-                I also offer in-person, one-on-one training in pattern making for beginners and advanced learners, using manual methods and Richpeace CAD software. If you are looking for professional pattern making support or want to learn pattern making with clear, practical guidance, feel free to reach out to discuss your requirements.
-              </p>
-              <div className="flex flex-col gap-4">
-                <div className="flex items-start gap-4">
-                  <div className="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-1">
-                    <Star className="w-4 h-4 text-accent" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">22+ Years Experience</h4>
-                    <p className="text-muted-foreground">Working with global designers and brands</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-1">
-                    <Star className="w-4 h-4 text-accent" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">Richpeace CAD Expertise</h4>
-                    <p className="text-muted-foreground">Professional CAD pattern creation</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-1">
-                    <Star className="w-4 h-4 text-accent" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">One-on-One Training</h4>
-                    <p className="text-muted-foreground">Personalized learning for all levels</p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
           </div>
         </div>
       </motion.section>
