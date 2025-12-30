@@ -118,15 +118,15 @@ export default function Home() {
           alt="Pattern Making Hero"
           className="absolute inset-0 w-full h-full object-cover z-0"
         />
-        <div className="absolute inset-0 bg-black/40 z-[1]"></div>
+        <div className="absolute inset-0 bg-white/40 z-[1]"></div>
         
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="flex items-center justify-center">
             <motion.div {...fadeInUp}>
-              <h1 className="font-serif text-5xl md:text-6xl font-bold mb-8 leading-tight text-white text-center drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
-                Master <span className="text-blue-400">Pattern Making</span>
+              <h1 className="font-serif text-5xl md:text-6xl font-bold mb-8 leading-tight text-black text-center">
+                Master <span className="text-blue-600">Pattern Making</span>
               </h1>
-              <p className="text-lg text-white mb-10 leading-relaxed font-bold text-center max-w-3xl mx-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
+              <p className="text-lg text-black mb-10 leading-relaxed font-bold text-center max-w-3xl mx-auto">
                 Learn both manual & CAD techniques from a 22-year industry expert. Transform your skills with hands-on training in Mira Road.
               </p>
             </motion.div>
