@@ -36,6 +36,16 @@ export default function Freelancing() {
       items: ["Original designs", "Style development", "Sample patterns"],
     },
     {
+      title: "Pattern Grading",
+      desc: "Professional size grading for all garment types maintaining proportional fit across sizes",
+      items: ["Base size pattern grading", "Pattern Maker making", "Fabric consumption"],
+    },
+    {
+      title: "Pattern Marking",
+      desc: "Precise marking for production with detailed seam allowances and construction notes",
+      items: ["Production-ready", "Clear markings", "Technical specs"],
+    },
+    {
       title: "Production Support",
       desc: "End-to-end technical support for manufacturing and CMT",
       items: ["Process guidance", "Quality review", "Technical approval"],
@@ -51,9 +61,9 @@ export default function Freelancing() {
       items: ["Design review", "Cost reduction", "Production planning"],
     },
     {
-      title: "CAD Digitization",
-      desc: "Convert manual patterns to digital CAD files for modern production",
-      items: ["Pattern digitization", "Digital grading", "Production files"],
+      title: "Digital Conversion",
+      desc: "Convert manual patterns to digital formats ready for production and CMT",
+      items: ["CAD digitization", "Digital grading and marker making for softcopy", "Pattern digitizer"],
     },
     {
       title: "Contract Work",

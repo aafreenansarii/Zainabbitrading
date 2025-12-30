@@ -182,40 +182,7 @@ export default function Home() {
               </motion.div>
             </Link>
 
-            {/* Grading & Marking Service */}
-            <Link href="/grading">
-              <motion.div
-                className="bg-gradient-to-br from-orange-50 to-pink-50 rounded-2xl border-2 border-orange-200 p-8 hover:border-orange-400 hover:shadow-2xl transition-all duration-300 cursor-pointer overflow-hidden relative group h-full flex flex-col"
-                onHoverStart={() => setHoveredService("grading")}
-                onHoverEnd={() => setHoveredService(null)}
-                whileHover={{ y: -8, scale: 1.02 }}
-                {...fadeInUp}
-                data-testid="card-service-grading"
-              >
-              <div className="absolute inset-0 bg-gradient-to-br from-orange-400/0 to-pink-400/0 group-hover:from-orange-400/10 group-hover:to-pink-400/10 transition-all duration-300"></div>
-              <div className="relative z-10 flex flex-col h-full">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-pink-500 rounded-xl flex items-center justify-center mb-6 shadow-lg">
-                  <Grid3x3 className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-3xl font-bold mb-4 text-gray-900">Grading & Marking</h3>
-                <p className="text-gray-700 mb-6 leading-relaxed font-medium flex-grow">
-                  Expert grading and marking services tailored to your specifications. Precise scaling for manufacturing and designer collections.
-                </p>
-                <ul className="space-y-3 text-sm font-semibold mt-auto">
-                  <li className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-gradient-to-r from-orange-500 to-pink-500"></div>
-                    <span>Precise size grading</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-gradient-to-r from-orange-500 to-pink-500"></div>
-                    <span>Production marking</span>
-                  </li>
-                </ul>
-              </div>
-              </motion.div>
-            </Link>
-
-            {/* Freelancing Service */}
+            {/* Freelancing & Production Service */}
             <Link href="/freelancing">
               <motion.div
                 className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl border-2 border-green-200 p-8 hover:border-green-400 hover:shadow-2xl transition-all duration-300 cursor-pointer overflow-hidden relative group h-full flex flex-col"
@@ -230,18 +197,18 @@ export default function Home() {
                 <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-teal-500 rounded-xl flex items-center justify-center mb-6 shadow-lg">
                   <Briefcase className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-3xl font-bold mb-4 text-gray-900">Freelance Services</h3>
+                <h3 className="text-3xl font-bold mb-4 text-gray-900">Freelance & Production</h3>
                 <p className="text-gray-700 mb-6 leading-relaxed font-medium flex-grow">
-                  Global freelancing support for pattern making and production. Flexible solutions for brands, factories, and fashion startups.
+                  Comprehensive pattern solutions including grading, marking, and technical design support for brands and factories worldwide.
                 </p>
                 <ul className="space-y-3 text-sm font-semibold mt-auto">
                   <li className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-gradient-to-r from-green-500 to-teal-500"></div>
-                    <span>Global brand support</span>
+                    <span>Grading & Marking</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-gradient-to-r from-green-500 to-teal-500"></div>
-                    <span>Flexible engagement</span>
+                    <span>Technical Support</span>
                   </li>
                 </ul>
               </div>
