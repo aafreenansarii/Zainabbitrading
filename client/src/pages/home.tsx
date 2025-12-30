@@ -130,17 +130,6 @@ export default function Home() {
               <p className="text-lg text-gray-800 mb-10 leading-relaxed font-medium text-center max-w-3xl mx-auto">
                 Learn both manual & CAD techniques from a 22-year industry expert. Transform your skills with hands-on training in Mira Road.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a href="#services">
-                  <motion.button 
-                    data-testid="button-get-started" 
-                    className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-10 py-4 rounded-xl font-bold hover:shadow-2xl transition-all text-lg flex items-center justify-center gap-2 shadow-lg hover:scale-105"
-                    whileHover={{ y: -2 }}
-                  >
-                    Get Started <ArrowRight className="w-5 h-5" />
-                  </motion.button>
-                </a>
-              </div>
             </motion.div>
           </div>
         </div>
