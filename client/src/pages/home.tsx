@@ -123,7 +123,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="flex items-center justify-center">
             <motion.div {...fadeInUp}>
-              <h1 className="text-5xl md:text-6xl mb-8 leading-tight text-black text-center uppercase tracking-tighter" style={{ fontFamily: "'League Spartan', sans-serif", fontWeight: 900 }}>
+              <h1 className="text-5xl md:text-6xl mb-8 leading-tight text-black text-center" style={{ fontFamily: "'Harlow Solid Italic', 'Alex Brush', cursive", fontWeight: "normal" }}>
                 Master <span className="text-blue-600">Pattern Making</span>
               </h1>
               <p className="text-lg text-black mb-10 leading-relaxed font-bold text-center max-w-3xl mx-auto">
@@ -142,7 +142,7 @@ export default function Home() {
       >
         <div className="max-w-7xl mx-auto">
           <motion.div className="text-center mb-20" {...fadeInUp}>
-            <h2 className="text-5xl md:text-6xl mb-6 text-gray-900 uppercase tracking-tighter" style={{ fontFamily: "'League Spartan', sans-serif", fontWeight: 900 }}>Our Services</h2>
+            <h2 className="text-5xl md:text-6xl mb-6 text-gray-900" style={{ fontFamily: "'Harlow Solid Italic', 'Alex Brush', cursive", fontWeight: "normal" }}>Our Services</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto font-medium">
               Comprehensive solutions for Pattern Makers, Fashion Designers, and Businesses
             </p>
@@ -263,7 +263,7 @@ export default function Home() {
               />
             </motion.div>
             <motion.div {...fadeInUp}>
-              <h2 className="text-5xl md:text-6xl mb-8 leading-tight text-gray-900 uppercase tracking-tighter" style={{ fontFamily: "'League Spartan', sans-serif", fontWeight: 900 }}>About <span className="text-blue-600">A.M Ansari</span></h2>
+              <h2 className="text-5xl md:text-6xl mb-8 leading-tight text-gray-900" style={{ fontFamily: "'Harlow Solid Italic', 'Alex Brush', cursive", fontWeight: "normal" }}>About <span className="text-blue-600">A.M Ansari</span></h2>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed font-medium">
                 I am a professional Pattern Maker with 22 years of industry experience, working with designers, brands, factories, startups, and individual clients worldwide. I create manual and CAD patterns for menswear, womenswear, and kidswear, including western, formal, and casual garments, along with grading, scaling, and marking.
               </p>
@@ -308,7 +308,7 @@ export default function Home() {
       <motion.section className="py-24 px-4 sm:px-6 lg:px-8 bg-white" {...fadeInUp}>
         <div className="max-w-7xl mx-auto text-center">
           <motion.div className="text-center mb-16" {...fadeInUp}>
-            <h2 className="text-5xl md:text-6xl mb-6 text-gray-900 uppercase tracking-tighter" style={{ fontFamily: "'League Spartan', sans-serif", fontWeight: 900 }}>Achievements</h2>
+            <h2 className="text-5xl md:text-6xl mb-6 text-gray-900" style={{ fontFamily: "'Harlow Solid Italic', 'Alex Brush', cursive", fontWeight: "normal" }}>Achievements</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto font-medium">
               Over two decades of excellence in the pattern making industry.
             </p>
@@ -338,7 +338,7 @@ export default function Home() {
       <motion.section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50" {...staggerContainer}>
         <div className="max-w-7xl mx-auto">
           <motion.div className="text-center mb-16" {...fadeInUp}>
-            <h2 className="text-5xl md:text-6xl mb-6 text-gray-900 uppercase tracking-tighter" style={{ fontFamily: "'League Spartan', sans-serif", fontWeight: 900 }}>What People Say</h2>
+            <h2 className="text-5xl md:text-6xl mb-6 text-gray-900" style={{ fontFamily: "'Harlow Solid Italic', 'Alex Brush', cursive", fontWeight: "normal" }}>What People Say</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto font-medium">
               Real feedback from students and professionals who have trained with us.
             </p>
@@ -419,7 +419,7 @@ export default function Home() {
       <motion.section id="contact" className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-100" {...staggerContainer}>
         <div className="max-w-7xl mx-auto">
           <motion.div className="text-center mb-20" {...fadeInUp}>
-            <h2 className="text-5xl md:text-6xl mb-6 text-gray-900 uppercase tracking-tighter" style={{ fontFamily: "'League Spartan', sans-serif", fontWeight: 900 }}>Get In Touch</h2>
+            <h2 className="text-5xl md:text-6xl mb-6 text-gray-900" style={{ fontFamily: "'Harlow Solid Italic', 'Alex Brush', cursive", fontWeight: "normal" }}>Get In Touch</h2>
             <p className="text-lg text-gray-600 font-medium">We'd love to hear from you</p>
           </motion.div>
 
