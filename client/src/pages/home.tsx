@@ -109,25 +109,28 @@ export default function Home() {
       {/* Hero Section */}
       <motion.section
         className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden min-h-[600px] flex items-center justify-center"
-        style={{
-          backgroundImage: `url(${heroImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
-        }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-        <div className="absolute inset-0 bg-black/30"></div>
+        <div 
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: `url(${heroImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundAttachment: 'fixed'
+          }}
+        ></div>
+        <div className="absolute inset-0 bg-black/40 z-[1]"></div>
         
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="flex items-center justify-center">
             <motion.div {...fadeInUp}>
-              <h1 className="font-serif text-5xl md:text-6xl font-bold mb-8 leading-tight text-white text-center drop-shadow-2xl">
+              <h1 className="font-serif text-5xl md:text-6xl font-bold mb-8 leading-tight text-white text-center drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
                 Master <span className="text-blue-400">Pattern Making</span>
               </h1>
-              <p className="text-lg text-white mb-10 leading-relaxed font-bold text-center max-w-3xl mx-auto drop-shadow-xl">
+              <p className="text-lg text-white mb-10 leading-relaxed font-bold text-center max-w-3xl mx-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
                 Learn both manual & CAD techniques from a 22-year industry expert. Transform your skills with hands-on training in Mira Road.
               </p>
             </motion.div>
