@@ -123,7 +123,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="flex items-center justify-center">
             <motion.div {...fadeInUp}>
-              <h1 className="text-5xl md:text-7xl mb-8 leading-tight text-black text-center italic drop-shadow-sm" style={{ fontFamily: "'Harlow Solid Italic', 'Brush Script MT', cursive" }}>
+              <h1 className="text-5xl md:text-7xl mb-8 leading-tight text-black text-center" style={{ fontFamily: "'Cooper Black', serif", fontWeight: 900 }}>
                 Master <span className="text-blue-600">Pattern Making</span>
               </h1>
               <p className="text-lg text-black mb-10 leading-relaxed font-bold text-center max-w-3xl mx-auto">
