@@ -108,20 +108,16 @@ export default function Home() {
 
       {/* Hero Section */}
       <motion.section
-        className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden min-h-[600px] flex items-center justify-center"
+        className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden min-h-[600px] flex items-center justify-center bg-gray-100"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-        <div 
-          className="absolute inset-0 z-0"
-          style={{
-            backgroundImage: `url(${heroImage})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundAttachment: 'fixed'
-          }}
-        ></div>
+        <img 
+          src={heroImage} 
+          alt="Pattern Making Hero"
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        />
         <div className="absolute inset-0 bg-black/40 z-[1]"></div>
         
         <div className="max-w-7xl mx-auto relative z-10">
