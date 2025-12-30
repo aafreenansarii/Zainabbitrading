@@ -127,7 +127,7 @@ export default function Home() {
                 Master <span className="text-blue-600">Pattern Making</span>
               </h1>
               <p className="text-lg text-black mb-10 leading-relaxed font-bold text-center max-w-3xl mx-auto">
-                Learn both manual & CAD techniques from a 22-year industry expert. Transform your skills with hands-on training in Mira Road.
+                Experience precision in manual and CAD pattern making, from expert-led training to professional services.
               </p>
             </motion.div>
           </div>
