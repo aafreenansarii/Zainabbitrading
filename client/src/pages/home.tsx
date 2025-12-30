@@ -8,7 +8,7 @@ import freelanceImage from "@assets/stock_images/business_meeting_con_e4b19421.j
 import professionalPhoto from "@assets/professional_photo_1766695207315.JPG";
 import ContactForm from "@/components/contact-form";
 import logo from "@assets/only_ZBT_1766448125486.jpeg";
-import heroImage from "@assets/hero_1766450847632.png";
+import heroImage from "@assets/WhatsApp_Image_2025-12-22_at_19.22.11_(3)_1767114423149.jpeg";
 
 export default function Home() {
   const [location] = useLocation();
@@ -108,7 +108,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <motion.section
-        className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
+        className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden min-h-[600px] flex items-center justify-center"
         style={{
           backgroundImage: `url(${heroImage})`,
           backgroundSize: 'cover',
@@ -119,15 +119,15 @@ export default function Home() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-        <div className="absolute inset-0 bg-white/70 backdrop-blur-[2px]"></div>
+        <div className="absolute inset-0 bg-black/30"></div>
         
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="flex items-center justify-center">
             <motion.div {...fadeInUp}>
-              <h1 className="font-serif text-5xl md:text-6xl font-bold mb-8 leading-tight text-black text-center">
-                Master <span className="text-blue-600">Pattern Making</span>
+              <h1 className="font-serif text-5xl md:text-6xl font-bold mb-8 leading-tight text-white text-center drop-shadow-2xl">
+                Master <span className="text-blue-400">Pattern Making</span>
               </h1>
-              <p className="text-lg text-gray-800 mb-10 leading-relaxed font-medium text-center max-w-3xl mx-auto">
+              <p className="text-lg text-white mb-10 leading-relaxed font-bold text-center max-w-3xl mx-auto drop-shadow-xl">
                 Learn both manual & CAD techniques from a 22-year industry expert. Transform your skills with hands-on training in Mira Road.
               </p>
             </motion.div>
