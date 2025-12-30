@@ -263,6 +263,83 @@ export default function Home() {
         </div>
       </motion.section>
 
+      {/* Achievements Section */}
+      <motion.section className="py-20 px-4 sm:px-6 lg:px-8 bg-white" {...fadeInUp}>
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="text-center p-6 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-lg transition-all">
+              <div className="text-4xl font-bold text-blue-600 mb-2">22+</div>
+              <div className="text-sm font-black uppercase tracking-widest text-gray-500">Years Exp</div>
+            </div>
+            <div className="text-center p-6 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-lg transition-all">
+              <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
+              <div className="text-sm font-black uppercase tracking-widest text-gray-500">Students</div>
+            </div>
+            <div className="text-center p-6 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-lg transition-all">
+              <div className="text-4xl font-bold text-blue-600 mb-2">50+</div>
+              <div className="text-sm font-black uppercase tracking-widest text-gray-500">Brands</div>
+            </div>
+            <div className="text-center p-6 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-lg transition-all">
+              <div className="text-4xl font-bold text-blue-600 mb-2">100%</div>
+              <div className="text-sm font-black uppercase tracking-widest text-gray-500">Practical</div>
+            </div>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Testimonials Section */}
+      <motion.section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50" {...staggerContainer}>
+        <div className="max-w-7xl mx-auto">
+          <motion.div className="text-center mb-16" {...fadeInUp}>
+            <h2 className="font-serif text-5xl md:text-6xl font-bold mb-6 text-gray-900">What People Say</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto font-medium">
+              Real feedback from students and professionals who have trained with us.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                name: "Rahul Sharma",
+                role: "Fashion Designer",
+                content: "The manual pattern making course was eye-opening. Ansari sir's 22 years of experience really shows in his teaching style.",
+                rating: 5
+              },
+              {
+                name: "Priya Patel",
+                role: "Student",
+                content: "Learning Richpeace CAD here was the best decision for my career. The one-on-one attention is exactly what I needed.",
+                rating: 5
+              },
+              {
+                name: "Mohammed Zaid",
+                role: "Garment Exporter",
+                content: "We use their grading and marking services regularly. Precision is top-notch and delivery is always on time.",
+                rating: 5
+              }
+            ].map((testimonial, i) => (
+              <motion.div
+                key={i}
+                className="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl transition-all"
+                whileHover={{ y: -10 }}
+                {...fadeInUp}
+              >
+                <div className="flex gap-1 mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-gray-700 mb-6 italic leading-relaxed font-medium">"{testimonial.content}"</p>
+                <div>
+                  <div className="font-bold text-gray-900">{testimonial.name}</div>
+                  <div className="text-sm text-blue-600 font-semibold">{testimonial.role}</div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </motion.section>
+
       {/* About Section */}
       <motion.section id="about" className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white" {...staggerContainer}>
         <div className="max-w-7xl mx-auto">
