@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft, Star, Users, Clock, Award, ArrowUp, ChevronDown } from "lucide-react";
 import { Link } from "wouter";
 import { useState, useEffect } from "react";
-import trainingImage from "@assets/stock_images/professional_woman_t_dad03893.jpg";
+
 import heroImage from "@assets/hero_1766450847632.png";
 import logo from "@assets/only_ZBT_1766448125486.jpeg";
 
@@ -64,7 +64,10 @@ export default function Training() {
           <Link href="/" className="flex flex-col items-center flex-1">
             <div className="flex items-center gap-4 mb-1">
               <img src={logo} alt="Zainab Bi Trading" className="w-14 h-14 object-contain shadow-sm rounded-full" />
-              <span className="font-serif text-3xl font-extrabold tracking-tight bg-gradient-to-r from-red-600 via-pink-600 to-orange-600 bg-clip-text text-transparent drop-shadow-sm">
+              <span
+                className="font-serif text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-red-600 via-pink-600 to-orange-600 bg-clip-text text-transparent drop-shadow-sm"
+                style={{ fontFamily: "'Times New Roman', Times, serif" }}
+              >
                 Zainab Bi Trading
               </span>
             </div>
@@ -96,7 +99,7 @@ export default function Training() {
           <div className="flex items-center justify-center">
             <motion.div {...fadeInUp}>
               <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6 text-black text-center">
-                Professional Pattern Making <span className="text-blue-600">Training</span>
+                Professional Pattern <span className="text-blue-600"> Making Training</span>
               </h1>
               <p className="text-lg text-gray-800 mb-8 leading-relaxed font-medium text-center max-w-3xl mx-auto">
                 Master the art of pattern making with 22 years of industry expertise. Learn both manual techniques and Richpeace CAD software from a professional pattern maker working with global brands.
